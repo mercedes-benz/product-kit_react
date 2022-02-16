@@ -22,6 +22,15 @@ export default class ButtonTestModul extends React.Component {
                             Button
                         </a>
                     </Button>
+                    <Button startIcon={<OpenInNewIcon/>}>
+                        <a 
+                            href="https://mui.com/components/buttons/"
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                        >
+                            Button in MUI
+                        </a>
+                    </Button>
                     
                 </div>
                 <div class="component-wrapper button-component-wrapper">

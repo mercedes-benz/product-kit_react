@@ -25,11 +25,6 @@ export default class SelectTestModul extends React.Component {
             <div class="component-section-row">
                 <section class="component-section select-component">
                     <div class="section-header">
-                        <a href="https://material.io/develop/web/components/input-controls/select-menus/"
-                            class="mdc-typography--button" target="_blank" rel="noopener noreferrer">
-                            Select
-                            <i class="material-icons">open_in_new</i>
-                        </a>
                         <Button startIcon={<OpenInNewIcon/>}>
                             <a 
                                 href="https://material.io/develop/web/components/input-controls/select-menus/"
