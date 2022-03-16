@@ -1,13 +1,36 @@
-<!-- SPDX-License-Identifier: MIT -->
-# My Project
+<!-- SPDX-License-Identifier: MIT --->
 
-## Intended Usage
+![Product Kit React Logo](./docs/images/productkit_react_github_logo.png)
 
-⚠️ //TODO// Describe your example! Eg: This project is made for cooking the best Tiramisu. It works best with high quality ingredients and the best tools. Please describe your project as accurately and concisely as possible to help others understand your use case.
+[![license](https://img.shields.io/badge/license-MIT-38de03e?style=flat)](LICENSE)
+![React](https://img.shields.io/badge/React-17.0.2-61DBFB.svg)
+![MUI](https://img.shields.io/badge/MUI-5.3.0-3F51B5.svg)
+
+Product Kit React provides a theme for Daimler TSS web frontends based on the material design framework MUI.
+
+Feel free to open an [issue](https://github.com/mercedes-benz/product-kit_react/issues) or provide a pull request with the desired modifications.
+
+## Examples
+⚠️ //TODO//
 
 ## Installation
+⚠️ //TODO//
 
-⚠️ //TODO// Add your information and describe how the project can be used.
+## Usage
+⚠️ //TODO//
+
+### Colors
+
+### Spacing
+
+### Container
+
+### Typography
+
+### Darkmode
+
+### Elevation
+
 
 ## Contributing
 
