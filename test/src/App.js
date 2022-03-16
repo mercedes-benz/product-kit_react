@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import { ThemeProvider } from '@mui/material/styles';
-import { theme } from "product_kit_react";
+import { theme } from "./style/index";
 import ButtonTestModul from './components/ButtonTestModul';
 import DrawerTestModul from './components/DrawerTestModul';
 import TopAppBarTestModul from "./components/TopAppBarTestModul";
