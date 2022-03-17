@@ -1,36 +1,37 @@
 import React from "react";
 import {
     Button,
-    ButtonGroup
+    ButtonGroup,
 } from "@mui/material";
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 export default class ButtonGroupTestModul extends React.Component {
     render() {
         return (
-            <section class="component-section">
-                <div class="section-header">
-                    <Button startIcon={<OpenInNewIcon/>}>
-                        <a 
+            <section>
+                <div>
+                    <Button startIcon={<OpenInNewIcon />}>
+                        <a
                             href="https://mui.com/components/button-group/"
-                            target="_blank" 
+                            target="_blank"
                             rel="noopener noreferrer"
                         >
                             Button Group in MUI
                         </a>
                     </Button>
-                    
+
                 </div>
                 <div class="component-wrapper">
-                    <ButtonGroup 
+                    <ButtonGroup
                         variant="contained"
+                        color="error"
                     >
                         <Button>One</Button>
                         <Button>Two</Button>
                         <Button>Three</Button>
                     </ButtonGroup>
-                    <ButtonGroup 
-                        variant="outlined" 
+                    <ButtonGroup
+                        variant="outlined"
                         size="small"
                         color="secondary"
                     >
@@ -38,24 +39,25 @@ export default class ButtonGroupTestModul extends React.Component {
                         <Button>Small Two</Button>
                         <Button>Small Three</Button>
                     </ButtonGroup>
-                    <ButtonGroup 
-                        variant="text" 
-                        size="large" 
+                    <ButtonGroup
+                        variant="text"
+                        size="large"
                     >
                         <Button>Large One</Button>
                         <Button>Large Two</Button>
                         <Button>Large Three</Button>
                     </ButtonGroup>
 
-                    <ButtonGroup 
+                    <ButtonGroup
                         orientation="vertical"
                         variant="contained"
+                        color="tertiary"
                     >
                         <Button>One</Button>
                         <Button>Two</Button>
                         <Button>Three</Button>
                     </ButtonGroup>
-                    <ButtonGroup 
+                    <ButtonGroup
                         variant="outlined"
                         orientation="vertical"
                         size="small"
@@ -65,10 +67,10 @@ export default class ButtonGroupTestModul extends React.Component {
                         <Button>Small Two</Button>
                         <Button>Small Three</Button>
                     </ButtonGroup>
-                    <ButtonGroup 
+                    <ButtonGroup
                         variant="text"
                         orientation="vertical"
-                        size="large" 
+                        size="large"
                     >
                         <Button>Large One</Button>
                         <Button>Large Two</Button>

@@ -33,42 +33,42 @@ import TooltipTestModul from "./components/TooltipTestModul";
 import TypographyTestModul from "./components/TypographyTestModul";
 
 
-class App extends React.Component{
-  render() {
-    return (
-        <ThemeProvider theme={theme}>
-            <AccordionTestModul/>
-            <ButtonGroupTestModul/>
-            <ButtonTestModul/>
-            <CardTestModul/>
-            <CheckBoxTestModul/>
-            <ChipsTestModul/>
-            <CircularProgressTestModul/>
-            <DialogsTestModul/>
-            <DividerTestModul/>
-            <DrawerTestModul/>
-            <FABTestModul/>
-            <IconButtonTestModul/>
-            <LinearProgressTestModul/>
-            <LinkTestModul/>
-            <ListTestModul/>
-            <MenuTestModul/>
-            <PaginationTestModul/>
-            <RadioButtonTestModul/>
-            <SelectTestModul/>
-            <SliderTestModul/>
-            <SnackbarTestModul/>
-            <SwitchTestModul/>
-            <TableTestModul/>
-            <TabsTestModul/>
-            <TextInputTestModul/>
-            <ToggleButtonTestModul/>
-            <TooltipTestModul/>
-            <TopAppBarTestModul/>
-            <TypographyTestModul/>
-        </ThemeProvider>
-      );
-  }
+class App extends React.Component {
+    render() {
+        return (
+            <ThemeProvider theme={theme}>
+                <AccordionTestModul />
+                <ButtonGroupTestModul />
+                <ButtonTestModul />
+                <CardTestModul />
+                <CheckBoxTestModul />
+                <ChipsTestModul />
+                <CircularProgressTestModul />
+                <DialogsTestModul />
+                <DividerTestModul />
+                <DrawerTestModul />
+                <FABTestModul />
+                <IconButtonTestModul />
+                <LinearProgressTestModul />
+                <LinkTestModul />
+                <ListTestModul />
+                <MenuTestModul />
+                <PaginationTestModul />
+                <RadioButtonTestModul />
+                <SelectTestModul />
+                <SliderTestModul />
+                <SnackbarTestModul />
+                <SwitchTestModul />
+                <TableTestModul />
+                <TabsTestModul />
+                <TextInputTestModul />
+                <ToggleButtonTestModul />
+                <TooltipTestModul />
+                <TopAppBarTestModul />
+                <TypographyTestModul />
+            </ThemeProvider>
+        );
+    }
 }
 
 export default App;

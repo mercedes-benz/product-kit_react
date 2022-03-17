@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
     Button,
     Typography
@@ -11,57 +12,69 @@ export default class TypographyTestModul extends React.Component {
         return (
             <section class="component-section">
                 <div class="section-header">
-                    <Button startIcon={<OpenInNewIcon/>}>
-                        <a 
+                    <Button startIcon={<OpenInNewIcon />}>
+                        <a
                             href="https://mui.com/components/typography/"
-                            target="_blank" 
+                            target="_blank"
                             rel="noopener noreferrer"
                         >
                             Typography in MUI
                         </a>
                     </Button>
-                    
+
                 </div>
                 <div class="component-wrapper">
-                <Typography variant="h1">
-                    h1. Heading
-                </Typography>
-                <Typography variant="h2">
-                    h2. Heading
-                </Typography>
-                <Typography variant="h3">
-                    h3. Heading
-                </Typography>
-                <Typography variant="h4">
-                    h4. Heading
-                </Typography>
-                <Typography variant="h5">
-                    h5. Heading
-                </Typography>
-                <Typography variant="h6">
-                    h6. Heading
-                </Typography>
-                <Typography variant="subtitle1">
-                    subtitle1
-                </Typography>
-                <Typography variant="subtitle2">
-                    subtitle2
-                </Typography>
-                <Typography variant="body1">
-                    Body 1 
-                </Typography>
-                <Typography variant="body2">
-                    Body 2
-                </Typography>
-                <Typography variant="button">
-                    Button
-                </Typography>
-                <Typography variant="caption">
-                    Caption
-                </Typography>
-                <Typography variant="overline">
-                    Overline
-                </Typography>
+                    <Typography variant="h1" className="myclass">
+                        The quick brown fox jumps over the lazy dog
+                    </Typography>
+                    <br />
+                    <Typography variant="h2">
+                        The quick brown fox jumps over the lazy dog
+                    </Typography>
+                    <br />
+                    <Typography variant="h3">
+                        The quick brown fox jumps over the lazy dog
+                    </Typography>
+                    <br />
+                    <Typography variant="h4">
+                        The quick brown fox jumps over the lazy dog
+                    </Typography>
+                    <br />
+                    <Typography variant="h5">
+                        The quick brown fox jumps over the lazy dog
+                    </Typography>
+                    <br />
+                    <Typography variant="h6">
+                        The quick brown fox jumps over the lazy dog
+                    </Typography>
+                    <br />
+                    <Typography variant="subtitle1">
+                        The quick brown fox jumps over the lazy dog
+                    </Typography>
+                    <br />
+                    <Typography variant="subtitle2">
+                        The quick brown fox jumps over the lazy dog
+                    </Typography>
+                    <br />
+                    <Typography variant="body1">
+                        The quick brown fox jumps over the lazy dog
+                    </Typography>
+                    <br />
+                    <Typography variant="body2">
+                        The quick brown fox jumps over the lazy dog
+                    </Typography>
+                    <br />
+                    <Typography variant="button">
+                        The quick brown fox jumps over the lazy dog
+                    </Typography>
+                    <br />
+                    <Typography variant="caption">
+                        The quick brown fox jumps over the lazy dog
+                    </Typography>
+                    <br />
+                    <Typography variant="overline">
+                        The quick brown fox jumps over the lazy dog
+                    </Typography>
                 </div>
             </section>
         );
