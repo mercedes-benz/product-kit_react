@@ -14,7 +14,56 @@ Feel free to open an [issue](https://github.com/mercedes-benz/product-kit_react/
 ⚠️ //TODO//
 
 ## Installation
-⚠️ //TODO//
+_Note that you must have node (with npm) installed._
+
+Create a new React project and [install MUI](https://mui.com/getting-started/installation/)
+
+```console
+npx create-react-app my-app
+cd my-app
+npm install @mui/material @emotion/react @emotion/styled
+```
+
+Install the npm package from the root directory through:
+
+```console
+npm install @daimler/productkit-react
+```
+
+Product Kit React provides two themes:
+- `themeCompact` is the default theme for creating compact web applications with body-max-widths and responsive margins.
+- `themeWide` only uses large body-max-widths, so your application always uses most of the screen, regardless of the screen size. This is often used for web applications like dashboards.
+
+Both themes include custom Daimler TSS colors, breakpoints, spacings, shapes and typography.
+
+You can choose between those two themes and import the one that suits your use-case best alongside MUI's `ThemeProvider` and `CssBaseline`:
+
+```javascript
+//in App.js
+
+import { ThemeProvider } from '@mui/material/styles';
+import { themeCompact } from "@daimler/productkit-react/src/style/index"; //you may also use themeWide
+import CssBaseline from '@mui/material/CssBaseline';
+```
+
+Now, add `ThemeProvider` with the imported theme as a wrapper for all your components and add `CssBaseline` as the first component inside of it. You may add the `enableColorScheme` prop to the latter if you wish to use dark mode. For example:
+
+```javascript
+// in App.js
+
+class App extends React.Component {
+    render() {
+        return (
+            <ThemeProvider theme={themeCompact}>
+                <CssBaseline enableColorScheme />
+                <!-- Your components -->
+            </ThemeProvider>
+        );
+    }
+}
+```
+
+Your MUI components are now styled accordingly to the styleguide of Daimler TSS!
 
 ## Usage
 ⚠️ //TODO//
