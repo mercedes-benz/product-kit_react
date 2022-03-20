@@ -37,7 +37,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 class App extends React.Component {
     render() {
         return (
-            <ThemeProvider theme={themeWide}>
+            <ThemeProvider theme={themeCompact}>
                 <CssBaseline enableColorScheme />
                 <AccordionTestModul />
                 <ButtonGroupTestModul />

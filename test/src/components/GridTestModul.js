@@ -3,13 +3,13 @@ import React from "react";
 import {
   Button,
   Grid,
-  Paper
+  Box
 } from "@mui/material";
 import { styled } from '@mui/material/styles';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+const Item = styled(Box)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#e4e7ec',
   ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: 'center',
@@ -33,7 +33,7 @@ export default class GridTestModul extends React.Component {
 
         </div>
         <div class="component-wrapper">
-          <Grid container spacing={2}>
+          <Grid container>
             <Grid item xs={6} md={8}>
               <Item>xs=6 md=8</Item>
             </Grid>

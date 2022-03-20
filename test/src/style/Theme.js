@@ -2,7 +2,7 @@ import { createTheme } from "@mui/material/styles"
 import * as tokens from "@daimler/productkit-core/exports/web/styles/js/variables.js"
 import * as tokensDark from "@daimler/productkit-core/exports/web/styles/js/variables-dark.js"
 
-var mode = "dark"
+var mode = "light"
 
 let theme = createTheme({
     breakpoints: {
@@ -286,6 +286,30 @@ theme = createTheme(theme, {
         return `${8 * value}px`
     },
     components: {
+        MuiGrid: {
+            styleOverrides: {
+                item: {
+                    paddingLeft: tokens.layoutApplicationCompactXsGutterSize.replace(/\d+/g,a=>a/2),
+                    paddingRight: tokens.layoutApplicationCompactXsGutterSize.replace(/\d+/g,a=>a/2),
+                    [theme.breakpoints.up('sm')]: {
+                        paddingLeft: tokens.layoutApplicationCompactSGutterSize.replace(/\d+/g,a=>a/2),
+                        paddingRight: tokens.layoutApplicationCompactSGutterSize.replace(/\d+/g,a=>a/2),
+                    },
+                    [theme.breakpoints.up('md')]: {
+                        paddingLeft: tokens.layoutApplicationCompactMGutterSize.replace(/\d+/g,a=>a/2),
+                        paddingRight: tokens.layoutApplicationCompactMGutterSize.replace(/\d+/g,a=>a/2),
+                    },
+                    [theme.breakpoints.up('lg')]: {
+                        paddingLeft: tokens.layoutApplicationCompactLGutterSize.replace(/\d+/g,a=>a/2),
+                        paddingRight: tokens.layoutApplicationCompactLGutterSize.replace(/\d+/g,a=>a/2),
+                    },
+                    [theme.breakpoints.up('xl')]: {
+                        paddingLeft: tokens.layoutApplicationCompactXlGutterSize.replace(/\d+/g,a=>a/2),
+                        paddingRight: tokens.layoutApplicationCompactXlGutterSize.replace(/\d+/g,a=>a/2),
+                    },
+                }
+            }
+        }
     },
 })
 
@@ -344,22 +368,11 @@ let themeWide = createTheme(theme, {
                 }
             },
         },
-        MuiGrid: {
-            styleOverrides: {
-                root: {
-                    paddingLeft: "0px",
-                },
-                item: {
-                    paddingLeft: "50px",
-                }
-
-            }
-        }
     },
 })
 
-themeCompact = createTheme(theme, {
-    /*overrides: {
+/*themeCompact = createTheme(theme, {
+    overrides: {
         MuiCssBaseline: {
             '@global': {
                 '.Mui-selected': {
@@ -468,7 +481,7 @@ themeCompact = createTheme(theme, {
                 opacity: 0.74
             }
         }
-    }*/
-})
+    }
+})*/
 
 export { themeCompact, themeWide };
