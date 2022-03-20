@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import { ThemeProvider } from '@mui/material/styles';
-import { theme } from "./style/index";
+import { themeCompact, themeWide } from "./style/index";
 import ButtonTestModul from './components/ButtonTestModul';
 import DrawerTestModul from './components/DrawerTestModul';
 import TopAppBarTestModul from "./components/TopAppBarTestModul";
@@ -31,12 +31,14 @@ import TabsTestModul from "./components/TabsTestModul";
 import ToggleButtonTestModul from "./components/ToggleButtonTestModul";
 import TooltipTestModul from "./components/TooltipTestModul";
 import TypographyTestModul from "./components/TypographyTestModul";
-
+import GridTestModul from "./components/GridTestModul";
+import CssBaseline from '@mui/material/CssBaseline';
 
 class App extends React.Component {
     render() {
         return (
-            <ThemeProvider theme={theme}>
+            <ThemeProvider theme={themeWide}>
+                <CssBaseline enableColorScheme />
                 <AccordionTestModul />
                 <ButtonGroupTestModul />
                 <ButtonTestModul />
@@ -66,6 +68,7 @@ class App extends React.Component {
                 <TooltipTestModul />
                 <TopAppBarTestModul />
                 <TypographyTestModul />
+                <GridTestModul />
             </ThemeProvider>
         );
     }

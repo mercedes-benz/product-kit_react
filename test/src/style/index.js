@@ -1,5 +1,6 @@
-import theme from "./Theme";
+import { themeCompact, themeWide } from "./Theme";
 
 export {
-    theme
+    themeCompact,
+    themeWide
 };

@@ -2,7 +2,7 @@ import { createTheme } from "@mui/material/styles"
 import * as tokens from "@daimler/productkit-core/exports/web/styles/js/variables.js"
 import * as tokensDark from "@daimler/productkit-core/exports/web/styles/js/variables-dark.js"
 
-var mode = "light"
+var mode = "dark"
 
 let theme = createTheme({
     breakpoints: {
@@ -13,7 +13,7 @@ let theme = createTheme({
             lg: tokens.layoutApplicationCompactLScreenMinWidth,
             xl: tokens.layoutApplicationCompactXlScreenMinWidth,
         },
-        up: function(value) {
+        up: function (value) {
             return '@media (min-width: ' + this.values[value] + ')'
         }
     },
@@ -282,12 +282,83 @@ theme = createTheme(theme, {
             }
         },
     },
-    spacing: function(value) {
+    spacing: function (value) {
         return `${8 * value}px`
+    },
+    components: {
+    },
+})
+
+let themeCompact = createTheme(theme, {
+    components: {
+        MuiCssBaseline: {
+            styleOverrides: {
+                body: {
+                    paddingLeft: tokens.layoutApplicationCompactXsMarginSize,
+                    paddingRight: tokens.layoutApplicationCompactXsMarginSize,
+                    margin: "0 auto",
+                    [theme.breakpoints.up('sm')]: {
+                        paddingLeft: tokens.layoutApplicationCompactSMarginSize,
+                        paddingRight: tokens.layoutApplicationCompactSMarginSize,
+                    },
+                    [theme.breakpoints.up('md')]: {
+                        paddingLeft: "0px",
+                        paddingRight: "0px",
+                        maxWidth: tokens.layoutApplicationCompactMBodyMaxSize,
+                    },
+                    [theme.breakpoints.up('lg')]: {
+                        paddingLeft: tokens.layoutApplicationCompactLMarginSize,
+                        paddingRight: tokens.layoutApplicationCompactLMarginSize,
+                        maxWidth: "100%",
+                    },
+                    [theme.breakpoints.up('xl')]: {
+                        paddingLeft: "0px",
+                        paddingRight: "0px",
+                        maxWidth: tokens.layoutApplicationCompactXlBodyMaxSize,
+                    },
+                }
+            },
+        }
     }
 })
 
-theme = createTheme(theme, {
+let themeWide = createTheme(theme, {
+    components: {
+        MuiCssBaseline: {
+            styleOverrides: {
+                body: {
+                    margin: "0 auto",
+                    maxWidth: tokens.layoutApplicationWideXsBodyMaxSize,
+                    [theme.breakpoints.up('sm')]: {
+                        maxWidth: tokens.layoutApplicationWideSBodyMaxSize
+                    },
+                    [theme.breakpoints.up('md')]: {
+                        maxWidth: tokens.layoutApplicationWideMBodyMaxSize
+                    },
+                    [theme.breakpoints.up('lg')]: {
+                        maxWidth: tokens.layoutApplicationWideLBodyMaxSize
+                    },
+                    [theme.breakpoints.up('xl')]: {
+                        maxWidth: tokens.layoutApplicationWideXlBodyMaxSize
+                    },
+                }
+            },
+        },
+        MuiGrid: {
+            styleOverrides: {
+                root: {
+                    paddingLeft: "0px",
+                },
+                item: {
+                    paddingLeft: "50px",
+                }
+
+            }
+        }
+    },
+})
+
+themeCompact = createTheme(theme, {
     /*overrides: {
         MuiCssBaseline: {
             '@global': {
@@ -400,4 +471,4 @@ theme = createTheme(theme, {
     }*/
 })
 
-export default theme;
+export { themeCompact, themeWide };
