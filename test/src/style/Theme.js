@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT 
+
 import { createTheme } from "@mui/material/styles"
 import * as tokens from "@daimler/productkit-core/exports/web/styles/js/variables.js"
 import * as tokensDark from "@daimler/productkit-core/exports/web/styles/js/variables-dark.js"

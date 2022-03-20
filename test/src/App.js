@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT 
+
 import './App.css';
 import React from 'react';
 import { ThemeProvider } from '@mui/material/styles';
