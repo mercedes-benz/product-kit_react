@@ -1,8 +1,7 @@
 // SPDX-License-Identifier: MIT 
 
-import { themeCompact, themeWide } from "./Theme";
+import { themeCompactLight, themeCompactDark, themeWideLight, themeWideDark } from "./Theme";
 
 export {
-    themeCompact,
-    themeWide
+    themeCompactLight, themeCompactDark, themeWideLight, themeWideDark
 };

@@ -38,7 +38,7 @@ export default class CardTestModul extends React.Component {
                     
                 </div>
                 <div class="component-wrapper">
-                    <Card >
+                    <Card>
                         <CardHeader
                             title="This is the title of the card"
                             subheader="This is the subtitle of the card"

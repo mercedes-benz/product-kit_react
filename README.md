@@ -11,9 +11,11 @@ Product Kit React provides a theme for Daimler TSS web frontends based on the ma
 Feel free to open an [issue](https://github.com/mercedes-benz/product-kit_react/issues) or provide a pull request with the desired modifications.
 
 ## Examples
+
 ⚠️ //TODO//
 
 ## Installation
+
 _Note that you must have node (with npm) installed._
 
 Create a new React project and [install MUI](https://mui.com/getting-started/installation/)
@@ -24,48 +26,63 @@ cd my-app
 npm install @mui/material @emotion/react @emotion/styled
 ```
 
-Install the npm package from the root directory through:
+Install the Product Kit React npm package from the root directory through:
 
 ```console
 npm install @daimler/productkit-react
 ```
 
-Product Kit React provides two themes:
-- `themeCompact` is the default theme for creating compact web applications with body-max-widths and responsive margins.
-- `themeWide` only uses large body-max-widths, so your application always uses most of the screen, regardless of the screen size. This is often used for web applications like dashboards.
+Product Kit React provides four themes:
 
-Both themes include custom Daimler TSS colors, breakpoints, spacings, shapes and typography.
+- Two themes for creating compact web applications with compact body-max-widths and responsive margins
+  - `themeCompactLight` for light mode.
+  - `themeCompactDark` for dark mode.
+- Two themes with larger body-max-widths, so your application always uses most of the screen, regardless of the screen size. This is often used for web applications like dashboards.
+  - `themeWideLight` for light mode.
+  - `themeWideDark` for dark mode.
 
-You can choose between those two themes and import the one that suits your use-case best alongside MUI's `ThemeProvider` and `CssBaseline`:
+All themes include custom Daimler TSS colors, breakpoints, spacings, shapes and typography.
+
+You can choose between those themes and import the one that suits your use-case best alongside MUI's `ThemeProvider` and `CssBaseline`:
 
 ```javascript
-//in App.js
+//in src/App.js
 
-import { ThemeProvider } from '@mui/material/styles';
-import { themeCompact } from "@daimler/productkit-react/src/style/index"; //you may also use themeWide
-import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider } from "@mui/material/styles";
+import { themeCompactLight } from "@daimler/productkit-react/src/style/index"; //you may also use the other themes
+import CssBaseline from "@mui/material/CssBaseline";
 ```
 
-Now, add `ThemeProvider` with the imported theme as a wrapper for all your components and add `CssBaseline` as the first component inside of it. You may add the `enableColorScheme` prop to the latter if you wish to use dark mode. For example:
+Now, add `ThemeProvider` with the imported theme as a wrapper for all your components and add `CssBaseline` as the first component inside of it. You may add the `enableColorScheme` prop to the latter if you wish to use dark mode. In order to take advantage of the `compact` and `wide` layout, please wrap your main components in the `main` tag. For example:
 
 ```javascript
-// in App.js
+// in src/App.js
 
-class App extends React.Component {
-    render() {
-        return (
-            <ThemeProvider theme={themeCompact}>
-                <CssBaseline enableColorScheme />
-                <!-- Your components -->
-            </ThemeProvider>
-        );
-    }
+export default function App() {
+    return (
+        <ThemeProvider theme={themeCompactLight}>
+            <CssBaseline enableColorScheme />
+            <!-- Navbar, sidebar, etc... -->
+            <main>
+                <!-- Your main components -->
+            </main>
+        </ThemeProvider>
+    );
 }
+```
+
+Lastly, import the fonts `Source Sans Pro` and `Source Code Pro`:
+
+```html
+<!-- in head of public/index.html -->
+
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+Pro&display=swap" rel="stylesheet">
 ```
 
 Your MUI components are now styled accordingly to the styleguide of Daimler TSS!
 
 ## Usage
+
 ⚠️ //TODO//
 
 ### Colors
@@ -79,7 +96,6 @@ Your MUI components are now styled accordingly to the styleguide of Daimler TSS!
 ### Darkmode
 
 ### Elevation
-
 
 ## Contributing
 

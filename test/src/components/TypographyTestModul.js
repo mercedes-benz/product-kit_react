@@ -26,7 +26,16 @@ export default class TypographyTestModul extends React.Component {
 
                 </div>
                 <div class="component-wrapper">
-                    <Typography variant="h1" className="myclass">
+                    <Typography variant="h1">
+                        <code>
+                            Source Code Pro
+                        </code>
+                    </Typography>
+                    <br />
+                    <Typography variant="h1">
+                        Source Sans Pro
+                    </Typography>
+                    <Typography variant="h1">
                         The quick brown fox jumps over the lazy dog
                     </Typography>
                     <br />

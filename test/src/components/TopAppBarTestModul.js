@@ -31,17 +31,17 @@ export default class TopAppBarTestModul extends React.Component {
                 <div class="component-wrapper top-bar-component-wrapper">
                     <AppBar position="static">
                         <Toolbar>
-                            <IconButton>
+                            <IconButton color="inherit">
                                 <MenuIcon/>
                             </IconButton>
                             Headline 6
-                            <IconButton>
+                            <IconButton color="inherit">
                                 <ShareIcon/>
                             </IconButton>
-                            <IconButton>
+                            <IconButton color="inherit">
                                 <BookmarkIcon/>
                             </IconButton>
-                            <IconButton>
+                            <IconButton color="inherit">
                                 <SearchIcon/>
                             </IconButton>
                         </Toolbar>
