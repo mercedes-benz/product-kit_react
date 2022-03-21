@@ -23,8 +23,8 @@ export default class ToggleButtonTestModul extends React.Component {
 
     render() {
         return (
-            <section class="component-section">
-                <div class="section-header">
+            <section className="component-section">
+                <div className="section-header">
                     <Button startIcon={<OpenInNewIcon/>}>
                         <a 
                             href="https://mui.com/components/toggle-button/"
@@ -36,7 +36,7 @@ export default class ToggleButtonTestModul extends React.Component {
                     </Button>
                     
                 </div>
-                <div class="component-wrapper">
+                <div className="component-wrapper">
                     <ToggleButtonGroup
                         value={this.state.value}
                         exclusive

@@ -15,8 +15,8 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 export default class CardTestModul extends React.Component {
     render() {
         return (
-            <section class="component-section">
-                <div class="section-header">
+            <section className="component-section">
+                <div className="section-header">
                     <Button startIcon={<OpenInNewIcon/>}>
                         <a 
                             href="https://material.io/components/cards"
@@ -37,8 +37,8 @@ export default class CardTestModul extends React.Component {
                     </Button>
                     
                 </div>
-                <div class="component-wrapper">
-                    <Card>
+                <div className="component-wrapper">
+                    <Card elevation={24}>
                         <CardHeader
                             title="This is the title of the card"
                             subheader="This is the subtitle of the card"

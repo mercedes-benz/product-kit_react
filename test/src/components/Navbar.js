@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
 export default function ButtonAppBar() {
     const classes = useStyles();
         return (
-            <section class="component-section">
+            <section className="component-section">
                 <div className={classes.root}>
                     <AppBar position="sticky">
                         <Toolbar>

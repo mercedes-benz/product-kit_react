@@ -16,8 +16,8 @@ import SearchIcon from '@mui/icons-material/Search';
 export default class TopAppBarTestModul extends React.Component {
     render() {
         return (
-            <section class="component-section">
-                <div class="section-header">
+            <section className="component-section">
+                <div className="section-header">
                     <Button startIcon={<OpenInNewIcon/>}>
                         <a 
                             href="https://material.io/design/components/app-bars-top.html"
@@ -28,7 +28,7 @@ export default class TopAppBarTestModul extends React.Component {
                         </a>
                     </Button>
                 </div>
-                <div class="component-wrapper top-bar-component-wrapper">
+                <div className="component-wrapper top-bar-component-wrapper">
                     <AppBar position="static">
                         <Toolbar>
                             <IconButton color="inherit">

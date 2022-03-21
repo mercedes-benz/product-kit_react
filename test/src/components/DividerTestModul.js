@@ -11,8 +11,8 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 export default class DividerTestModul extends React.Component {
     render() {
         return (
-            <section class="component-section">
-                <div class="section-header">
+            <section className="component-section">
+                <div className="section-header">
                     <Button startIcon={<OpenInNewIcon/>}>
                         <a 
                             href="https://material.io/components/dividers"
@@ -32,7 +32,7 @@ export default class DividerTestModul extends React.Component {
                         </a>
                     </Button>
                 </div>
-                <div class="component-wrapper">
+                <div className="component-wrapper">
                     <Divider/>
                     <Divider>Test Text</Divider>
                     <Divider textAlign="left">Test Text</Divider>

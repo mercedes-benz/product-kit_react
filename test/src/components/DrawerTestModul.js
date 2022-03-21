@@ -31,8 +31,8 @@ export default class DrawerTestModul extends React.Component {
 
     render() {
         return (
-            <section class="component-section">
-                <div class="section-header">
+            <section className="component-section">
+                <div className="section-header">
                     <Button startIcon={<OpenInNewIcon/>}>
                         <a 
                             href="https://material.io/design/components/navigation-drawer.html"
@@ -43,7 +43,7 @@ export default class DrawerTestModul extends React.Component {
                         </a>
                     </Button>
                 </div>
-                <div class="component-wrapper drawer-component-wrapper">
+                <div className="component-wrapper drawer-component-wrapper">
                     <Button onClick={this.toggleDrawer(true)}>
                         Open Drawer
                     </Button>

@@ -9,8 +9,11 @@ const breakpoints = {
     values: {
         xs: tokens.layoutApplicationCompactXsScreenMinWidth,
         sm: tokens.layoutApplicationCompactSScreenMinWidth,
+        s: tokens.layoutApplicationCompactSScreenMinWidth,
         md: tokens.layoutApplicationCompactMScreenMinWidth,
+        m: tokens.layoutApplicationCompactMScreenMinWidth,
         lg: tokens.layoutApplicationCompactLScreenMinWidth,
+        l: tokens.layoutApplicationCompactLScreenMinWidth,
         xl: tokens.layoutApplicationCompactXlScreenMinWidth,
     },
     up: function (value) {

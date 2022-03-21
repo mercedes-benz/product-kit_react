@@ -29,8 +29,8 @@ export default class PaginationTestModul extends React.Component {
 
     render() {
         return (
-            <section class="component-section">
-                <div class="section-header">
+            <section className="component-section">
+                <div className="section-header">
                     <Button startIcon={<OpenInNewIcon/>}>
                         <a 
                             href="https://mui.com/components/pagination/"
@@ -42,7 +42,7 @@ export default class PaginationTestModul extends React.Component {
                     </Button>
                     
                 </div>
-                <div class="component-wrapper">
+                <div className="component-wrapper">
                 <Pagination count={20} />
                 <Pagination count={20} showFirstButton showLastButton/>
                 <Pagination count={20} hidePrevButton hideNextButton/>

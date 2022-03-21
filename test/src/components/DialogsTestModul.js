@@ -35,8 +35,8 @@ export default class DialogsTestModul extends React.Component {
 
     render() {
         return (
-            <section class="component-section">
-                <div class="section-header">
+            <section className="component-section">
+                <div className="section-header">
                     <Button startIcon={<OpenInNewIcon/>}>
                         <a 
                             href="https://material.io/components/dialogs"
@@ -57,7 +57,7 @@ export default class DialogsTestModul extends React.Component {
                     </Button>
                     
                 </div>
-                <div class="component-wrapper">
+                <div className="component-wrapper">
                     <Button variant="outlined" onClick={this.handleOpen("alertOpen")}>
                         Open Alert dialog
                     </Button>

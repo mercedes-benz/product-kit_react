@@ -24,8 +24,8 @@ export default class TabsTestModul extends React.Component {
 
     render() {
         return (
-            <section class="component-section">
-                <div class="section-header">
+            <section className="component-section">
+                <div className="section-header">
                     <Button startIcon={<OpenInNewIcon/>}>
                         <a 
                             href="https://material.io/components/tabs"
@@ -46,7 +46,7 @@ export default class TabsTestModul extends React.Component {
                     </Button>
                     
                 </div>
-                <div class="component-wrapper">
+                <div className="component-wrapper">
                     <Box sx={{ maxWidth: 480, bgcolor: 'background.paper' }}>
                         <Tabs
                             value={this.state.value}

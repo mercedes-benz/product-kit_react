@@ -13,8 +13,8 @@ import AddIcon from '@mui/icons-material/Add';
 export default class FABTestModul extends React.Component {
     render() {
         return (
-            <section class="component-section">
-                <div class="section-header">
+            <section className="component-section">
+                <div className="section-header">
                     <Button startIcon={<OpenInNewIcon/>}>
                         <a 
                             href="https://material.io/design/components/buttons-floating-action-button.html"
@@ -25,7 +25,7 @@ export default class FABTestModul extends React.Component {
                         </a>
                     </Button>
                 </div>
-                <div class="component-wrapper fab-component-wrapper">
+                <div className="component-wrapper fab-component-wrapper">
                     <Fab variant="extended" aria-label="edit">
                         <EditIcon />
                         edit

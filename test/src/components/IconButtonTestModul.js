@@ -19,8 +19,8 @@ export default class IconButtonTestModul extends React.Component {
 
     render() {
         return (
-            <section class="component-section">
-                <div class="section-header">
+            <section className="component-section">
+                <div className="section-header">
                     <Button startIcon={<OpenInNewIcon/>}>
                         <a 
                             href="https://material.io/design/components/buttons.html#toggle-button"
@@ -31,7 +31,7 @@ export default class IconButtonTestModul extends React.Component {
                         </a>
                     </Button>
                 </div>
-                <div class="component-wrapper icon-button-component-wrapper">
+                <div className="component-wrapper icon-button-component-wrapper">
                 <IconButton aria-label="mute" onClick={(event) => this.setState({mute: !this.state.mute})}>
                     {
                         this.state.mute ? 

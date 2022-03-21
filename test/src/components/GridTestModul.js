@@ -21,8 +21,8 @@ const Item = styled(Box)(({ theme }) => ({
 export default class GridTestModul extends React.Component {
   render() {
     return (
-      <section class="component-section">
-        <div class="section-header">
+      <section className="component-section">
+        <div className="section-header">
           <Button startIcon={<OpenInNewIcon />}>
             <a
               href="https://mui.com/components/grid/"
@@ -34,7 +34,7 @@ export default class GridTestModul extends React.Component {
           </Button>
 
         </div>
-        <div class="component-wrapper">
+        <div className="component-wrapper">
           <Grid container>
             <Grid item xs={6} md={8}>
               <Item>xs=6 md=8</Item>

@@ -30,8 +30,8 @@ export default class ChipsTestModul extends React.Component {
 
     render() {
         return (
-            <section class="component-section">
-                <div class="section-header">
+            <section className="component-section">
+                <div className="section-header">
                     <Button startIcon={<OpenInNewIcon/>}>
                             <a 
                                 href="https://material.io/design/components/chips.html"
@@ -42,17 +42,17 @@ export default class ChipsTestModul extends React.Component {
                             </a>
                         </Button>
                 </div>
-                <div class="component-wrapper chips-component-wrapper chips-component-wrapper-1">
+                <div className="component-wrapper chips-component-wrapper chips-component-wrapper-1">
                     <Chip label="Body 2" />
                     <Chip label="Body 2" />
                     <Chip label="Body 2" variant="outlined" />
                 </div>
-                <div class="component-wrapper chips-component-wrapper chips-component-wrapper-2">
+                <div className="component-wrapper chips-component-wrapper chips-component-wrapper-2">
                     <Chip icon={this.state.label1? <CheckIcon /> : null} label="Body 2" onClick={this.toggleSelection("label1")}/>
                     <Chip icon={this.state.label2? <CheckIcon /> : null} label="Body 2" onClick={this.toggleSelection("label2")}/>
                     <Chip icon={this.state.label3? <CheckIcon /> : null} label="Body 2" onClick={this.toggleSelection("label3")} variant="outlined" />
                 </div>
-                <div class="component-wrapper chips-component-wrapper chips-component-wrapper-3">
+                <div className="component-wrapper chips-component-wrapper chips-component-wrapper-3">
                     <Chip label="Body 2" onDelete={this.handleDelete} />
                     <Chip label="Body 2" variant="outlined" onDelete={this.handleDelete} />
                     <Chip label="Body 2" variant="outlined" onDelete={this.handleDelete} />

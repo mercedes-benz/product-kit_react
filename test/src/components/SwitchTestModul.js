@@ -11,8 +11,8 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 export default class SwitchTestModul extends React.Component {
     render() {
         return (
-            <section class="component-section switch-section">
-                <div class="section-header">
+            <section className="component-section switch-section">
+                <div className="section-header">
                     <Button startIcon={<OpenInNewIcon/>}>
                         <a 
                             href="https://material.io/design/components/selection-controls.html#switches"
@@ -23,7 +23,7 @@ export default class SwitchTestModul extends React.Component {
                         </a>
                     </Button>
                 </div>
-                <div class="component-wrapper switch-component-wrapper">
+                <div className="component-wrapper switch-component-wrapper">
                     <Switch defaultChecked />
                     <Switch />
                 </div>

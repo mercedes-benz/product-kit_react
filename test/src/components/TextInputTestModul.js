@@ -7,15 +7,14 @@ import {
     InputAdornment
 } from "@mui/material";
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-import ClearIcon from '@mui/icons-material/Clear';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import ErrorIcon from '@mui/icons-material/Error';
 
 export default class TextInputTestModul extends React.Component {
     render() {
         return (
-            <section class="component-section">
-                <div class="section-header">
+            <section className="component-section">
+                <div className="section-header">
                     <Button startIcon={<OpenInNewIcon/>}>
                         <a 
                             href="https://material.io/design/components/text-fields.html"
@@ -26,14 +25,14 @@ export default class TextInputTestModul extends React.Component {
                         </a>
                     </Button>
                 </div>
-                <div class="component-wrapper text-field-component-wrapper">
+                <div className="component-wrapper text-field-component-wrapper">
                     <TextField 
                         label="Subtitle 1/Caption" 
                         variant="outlined" 
                         helperText="Caption"
                     />
                 </div>
-                <div class="component-wrapper text-field-component-wrapper">
+                <div className="component-wrapper text-field-component-wrapper">
                     <TextField
                         label="Subtitle 1/Caption"
                         type="search"
@@ -48,7 +47,7 @@ export default class TextInputTestModul extends React.Component {
                         helperText="Caption"
                     />
                 </div>
-                <div class="component-wrapper text-field-component-wrapper">
+                <div className="component-wrapper text-field-component-wrapper">
                     <TextField 
                         error 
                         label="Subtitle 1/Caption" 
@@ -64,7 +63,7 @@ export default class TextInputTestModul extends React.Component {
                         helperText="Caption"
                     />
                 </div>
-                <div class="component-wrapper text-field-component-wrapper">
+                <div className="component-wrapper text-field-component-wrapper">
                     <TextField
                         label="Subtitle 1/Caption"
                         disabled
@@ -81,7 +80,7 @@ export default class TextInputTestModul extends React.Component {
                         helperText="Caption"
                     />
                 </div>
-                <div class="component-wrapper text-field-component-wrapper">
+                <div className="component-wrapper text-field-component-wrapper">
                     <TextField 
                         error 
                         disabled
@@ -91,14 +90,14 @@ export default class TextInputTestModul extends React.Component {
                         helperText="Caption"
                     />
                 </div>
-                <div class="component-wrapper text-field-component-wrapper">
+                <div className="component-wrapper text-field-component-wrapper">
                     <TextField 
                         label="Subtitle 1/Caption" 
                         variant="filled" 
                         helperText="Caption"
                     />
                 </div>
-                <div class="component-wrapper text-field-component-wrapper">
+                <div className="component-wrapper text-field-component-wrapper">
                     <TextField
                         label="Subtitle 1/Caption"
                         type="search"
@@ -113,7 +112,7 @@ export default class TextInputTestModul extends React.Component {
                         helperText="Caption"
                     />
                 </div>
-                <div class="component-wrapper text-field-component-wrapper">
+                <div className="component-wrapper text-field-component-wrapper">
                     <TextField 
                         error 
                         label="Subtitle 1/Caption" 
@@ -129,7 +128,7 @@ export default class TextInputTestModul extends React.Component {
                         helperText="Caption"
                     />
                 </div>
-                <div class="component-wrapper text-field-component-wrapper">
+                <div className="component-wrapper text-field-component-wrapper">
                     <TextField 
                         label="Subtitle 1/Caption" 
                         variant="filled" 
@@ -148,7 +147,7 @@ export default class TextInputTestModul extends React.Component {
                         helperText="Caption"
                     />
                 </div>
-                <div class="component-wrapper text-field-component-wrapper">
+                <div className="component-wrapper text-field-component-wrapper">
                     <TextField 
                         label="Subtitle 1/Caption" 
                         variant="filled" 
@@ -157,7 +156,7 @@ export default class TextInputTestModul extends React.Component {
                         disabled
                     />
                 </div>
-                <div class="component-wrapper text-field-component-wrapper">
+                <div className="component-wrapper text-field-component-wrapper">
                     <TextField 
                         label="Subtitle 1/Caption" 
                         variant="filled" 
@@ -165,7 +164,7 @@ export default class TextInputTestModul extends React.Component {
                         disabled
                     />
                 </div>
-                <div class="component-wrapper text-field-component-wrapper">
+                <div className="component-wrapper text-field-component-wrapper">
                     <TextField 
                         label="Caption" 
                         variant="outlined" 
@@ -174,7 +173,7 @@ export default class TextInputTestModul extends React.Component {
                         defaultValue="Subtitle1"
                     />
                 </div>
-                <div class="component-wrapper text-field-component-wrapper">
+                <div className="component-wrapper text-field-component-wrapper">
                     <TextField 
                         label="Caption" 
                         variant="filled" 
@@ -183,7 +182,7 @@ export default class TextInputTestModul extends React.Component {
                         defaultValue="Subtitle1"
                     />
                 </div>
-                <div class="component-wrapper text-field-component-wrapper">
+                <div className="component-wrapper text-field-component-wrapper">
                     <TextField 
                         error
                         label="Caption" 
@@ -193,7 +192,7 @@ export default class TextInputTestModul extends React.Component {
                         defaultValue="Subtitle1"
                     />
                 </div>
-                <div class="component-wrapper text-field-component-wrapper">
+                <div className="component-wrapper text-field-component-wrapper">
                     <TextField 
                         error
                         label="Caption" 
@@ -203,7 +202,7 @@ export default class TextInputTestModul extends React.Component {
                         defaultValue="Subtitle1"
                     />
                 </div>
-                <div class="component-wrapper text-field-component-wrapper">
+                <div className="component-wrapper text-field-component-wrapper">
                     <TextField 
                         disabled
                         label="Caption" 
@@ -213,7 +212,7 @@ export default class TextInputTestModul extends React.Component {
                         defaultValue="Subtitle1"
                     />
                 </div>
-                <div class="component-wrapper text-field-component-wrapper">
+                <div className="component-wrapper text-field-component-wrapper">
                     <TextField 
                         disabled
                         label="Caption" 

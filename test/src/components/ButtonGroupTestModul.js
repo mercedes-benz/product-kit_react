@@ -23,7 +23,7 @@ export default class ButtonGroupTestModul extends React.Component {
                     </Button>
 
                 </div>
-                <div class="component-wrapper">
+                <div className="component-wrapper">
                     <ButtonGroup
                         variant="contained"
                         color="error"

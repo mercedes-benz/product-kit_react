@@ -14,8 +14,8 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 export default class AccordionTestModul extends React.Component {
     render() {
         return (
-            <section class="component-section">
-                <div class="section-header">
+            <section className="component-section">
+                <div className="section-header">
                     <Button startIcon={<OpenInNewIcon/>}>
                         <a 
                             href="https://mui.com/components/accordion/"
@@ -27,7 +27,7 @@ export default class AccordionTestModul extends React.Component {
                     </Button>
                     
                 </div>
-                <div class="component-wrapper">
+                <div className="component-wrapper">
                     <Accordion>
                         <AccordionSummary
                             expandIcon={<ExpandMoreIcon />}

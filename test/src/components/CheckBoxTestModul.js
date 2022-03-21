@@ -25,8 +25,8 @@ export default class CheckBoxTestModul extends React.Component {
 
     render() {
         return (
-            <section class="component-section">
-                    <div class="section-header">
+            <section className="component-section">
+                    <div className="section-header">
                         <Button startIcon={<OpenInNewIcon/>}>
                             <a 
                                 href="https://material.io/design/components/selection-controls.html#checkboxes"
@@ -37,7 +37,7 @@ export default class CheckBoxTestModul extends React.Component {
                             </a>
                         </Button>
                     </div>
-                    <div class="component-wrapper checkbox-component-wrapper">
+                    <div className="component-wrapper checkbox-component-wrapper">
                     <Checkbox
                         checked={this.state.label1}
                         inputProps={{ 'aria-label': 'controlled' }}

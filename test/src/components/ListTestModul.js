@@ -18,8 +18,8 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 export default class ListTestModul extends React.Component {
     render() {
         return (
-            <section class="component-section">
-                <div class="section-header">
+            <section className="component-section">
+                <div className="section-header">
                     <Button startIcon={<OpenInNewIcon/>}>
                         <a 
                             href="https://material.io/components/lists"
@@ -39,7 +39,7 @@ export default class ListTestModul extends React.Component {
                         </a>
                     </Button>
                 </div>
-                <div class="component-wrapper">
+                <div className="component-wrapper">
                     <List>
                         <ListItem>
                             <ListItemAvatar>

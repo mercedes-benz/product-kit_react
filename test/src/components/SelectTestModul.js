@@ -24,9 +24,9 @@ export default class SelectTestModul extends React.Component {
 
     render() {
         return (
-            <div class="component-section-row">
-                <section class="component-section select-component">
-                    <div class="section-header">
+            <div className="component-section-row">
+                <section className="component-section select-component">
+                    <div className="section-header">
                         <Button startIcon={<OpenInNewIcon/>}>
                             <a 
                                 href="https://material.io/develop/web/components/input-controls/select-menus/"
@@ -37,7 +37,7 @@ export default class SelectTestModul extends React.Component {
                             </a>
                         </Button>
                     </div>
-                    <div class="component-wrapper">
+                    <div className="component-wrapper">
                         <FormControl  variant="filled">
                             <Select
                                 value={this.state.testValue1}
@@ -51,8 +51,8 @@ export default class SelectTestModul extends React.Component {
                             </Select>
                         </FormControl>
                     </div>
-                    <div class="component-wrapper">
-                        <FormControl error={this.state.testValue2 == ""} variant="filled">
+                    <div className="component-wrapper">
+                        <FormControl error={this.state.testValue2 === ""} variant="filled">
                             <Select
                                 value={this.state.testValue2}
                                 label="Subtitle 1/Caption"
@@ -65,8 +65,8 @@ export default class SelectTestModul extends React.Component {
                             </Select>
                         </FormControl>
                     </div>
-                    <div class="component-wrapper">
-                        <FormControl error={this.state.testValue2 == ""} variant="filled">
+                    <div className="component-wrapper">
+                        <FormControl error={this.state.testValue2 === ""} variant="filled">
                             <Select
                                 disabled
                                 value={this.state.testValue2}
@@ -81,10 +81,10 @@ export default class SelectTestModul extends React.Component {
                         </FormControl>
                     </div>
                 </section>
-                <section class="component-section select-component">
-                    <div class="section-header">
+                <section className="component-section select-component">
+                    <div className="section-header">
                     </div>
-                    <div class="component-wrapper">
+                    <div className="component-wrapper">
                         <FormControl >
                             <Select
                                 value={this.state.testValue3}
@@ -98,8 +98,8 @@ export default class SelectTestModul extends React.Component {
                             </Select>
                         </FormControl>
                     </div>
-                    <div class="component-wrapper">
-                        <FormControl error={this.state.testValue4 == ""}>
+                    <div className="component-wrapper">
+                        <FormControl error={this.state.testValue4 === ""}>
                             <Select
                                 value={this.state.testValue4}
                                 label="Subtitle 1/Caption"
@@ -112,8 +112,8 @@ export default class SelectTestModul extends React.Component {
                             </Select>
                         </FormControl>
                     </div>
-                    <div class="component-wrapper">
-                        <FormControl error={this.state.testValue2 == ""}>
+                    <div className="component-wrapper">
+                        <FormControl error={this.state.testValue2 === ""}>
                             <Select
                                 disabled
                                 value={this.state.testValue2}

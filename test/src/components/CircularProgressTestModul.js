@@ -12,8 +12,8 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 export default class CircularProgressTestModul extends React.Component {
     render() {
         return (
-            <section class="component-section">
-                <div class="section-header">
+            <section className="component-section">
+                <div className="section-header">
                     <Button startIcon={<OpenInNewIcon/>}>
                         <a 
                             href="https://material.io/design/components/progress-indicators.html#circular-progress-indicators"
@@ -24,7 +24,7 @@ export default class CircularProgressTestModul extends React.Component {
                         </a>
                     </Button>
                 </div>
-                <div class="component-wrapper circular-progress-component-wrapper">
+                <div className="component-wrapper circular-progress-component-wrapper">
                     <CircularProgress />
                     <CircularProgress color="secondary"/>
                     <CircularProgress color="success"/>

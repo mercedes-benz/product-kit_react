@@ -19,8 +19,8 @@ export default class MenuTestModul extends React.Component {
 
     render() {
         return (
-            <section class="component-section menu-section">
-                    <div class="section-header">
+            <section className="component-section menu-section">
+                    <div className="section-header">
                         <Button startIcon={<OpenInNewIcon/>}>
                             <a 
                                 href="https://material.io/design/components/menus.html"
@@ -32,7 +32,7 @@ export default class MenuTestModul extends React.Component {
                         </Button>
 
                     </div>
-                    <div class="component-wrapper">
+                    <div className="component-wrapper">
                         <Select
                             value={this.state.testValue}
                             label="Test"
