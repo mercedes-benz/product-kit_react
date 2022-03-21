@@ -5,6 +5,11 @@ import { createTheme } from "@mui/material/styles"
 import * as tokens from "@daimler/productkit-core/exports/web/styles/js/variables.js"
 import * as tokensDark from "@daimler/productkit-core/exports/web/styles/js/variables-dark.js"
 
+function hexToRgba(hex, opacity) {
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? "rgba(" + parseInt(result[1], 16) + ", " + parseInt(result[2], 16) + ", " + parseInt(result[3], 16) + ", " + opacity + ")" : null;
+}
+
 const breakpoints = {
     values: {
         xs: tokens.layoutApplicationCompactXsScreenMinWidth,
@@ -28,19 +33,19 @@ const paletteLight = {
         //light: tokens.colorApplicationPrimary,
         main: tokens.colorApplicationPrimary,
         //dark: tokens.colorApplicationPrimary,
-        contrastText: tokens.colorApplicationContrastPrimary
+        contrastText: hexToRgba(tokens.colorApplicationContrastPrimary, tokens.opacityApplicationTextContrastHigh)
     },
     secondary: {
         main: tokens.colorApplicationSecondary,
-        contrastText: tokens.colorApplicationContrastSecondary
+        contrastText: hexToRgba(tokens.colorApplicationContrastSecondary, tokens.opacityApplicationTextContrastHigh)
     },
     tertiary: {
         main: tokens.colorApplicationTertiary,
-        contrastText: tokens.colorApplicationContrastTertiary
+        contrastText: hexToRgba(tokens.colorApplicationContrastTertiary, tokens.opacityApplicationTextContrastHigh)
     },
     quaternary: {
         main: tokens.colorApplicationQuaternary,
-        contrastText: tokens.colorApplicationContrastQuaternary
+        contrastText: hexToRgba(tokens.colorApplicationContrastQuaternary, tokens.opacityApplicationTextContrastHigh)
     },
     background: {
         default: tokens.colorApplicationBackground,
@@ -56,8 +61,16 @@ const paletteLight = {
     },
     error: {
         main: tokens.colorApplicationError,
-        contrastText: tokens.colorApplicationContrastError
+        contrastText: hexToRgba(tokens.colorApplicationContrastError, tokens.opacityApplicationTextContrastHigh)
     },
+    text: {
+        primary: hexToRgba(tokens.colorApplicationContrastBackground, tokens.opacityApplicationTextHigh),
+        secondary: hexToRgba(tokens.colorApplicationContrastBackground, tokens.opacityApplicationTextMedium),
+        disabled: hexToRgba(tokens.colorApplicationContrastBackground, tokens.opacityApplicationTextLow)
+    },
+    action: {
+        disabledOpacity: tokens.opacityApplicationTextLow
+    }
 }
 
 const paletteDark = {
@@ -68,19 +81,19 @@ const paletteDark = {
         //light: tokensDark.colorApplicationPrimary,
         main: tokensDark.colorApplicationPrimary,
         //dark: tokensDark.colorApplicationPrimary,
-        contrastText: tokensDark.colorApplicationContrastPrimary
+        contrastText: hexToRgba(tokensDark.colorApplicationContrastPrimary, tokensDark.opacityApplicationTextContrastHigh)
     },
     secondary: {
         main: tokensDark.colorApplicationSecondary,
-        contrastText: tokensDark.colorApplicationContrastSecondary
+        contrastText: hexToRgba(tokensDark.colorApplicationContrastSecondary, tokensDark.opacityApplicationTextContrastHigh)
     },
     tertiary: {
         main: tokensDark.colorApplicationTertiary,
-        contrastText: tokensDark.colorApplicationContrastTertiary
+        contrastText: hexToRgba(tokensDark.colorApplicationContrastTertiary, tokensDark.opacityApplicationTextContrastHigh)
     },
     quaternary: {
         main: tokensDark.colorApplicationQuaternary,
-        contrastText: tokensDark.colorApplicationContrastQuaternary
+        contrastText: hexToRgba(tokensDark.colorApplicationContrastQuaternary, tokensDark.opacityApplicationTextContrastHigh)
     },
     background: {
         default: tokensDark.colorApplicationBackground,
@@ -96,8 +109,17 @@ const paletteDark = {
     },
     error: {
         main: tokensDark.colorApplicationError,
-        contrastText: tokensDark.colorApplicationContrastError
+        contrastText: hexToRgba(tokensDark.colorApplicationContrastError, tokensDark.opacityApplicationTextContrastHigh)
     },
+    text: {
+        primary: hexToRgba(tokensDark.colorApplicationContrastBackground, tokensDark.opacityApplicationTextContrastHigh),
+        secondary: hexToRgba(tokensDark.colorApplicationContrastBackground, tokensDark.opacityApplicationTextContrastMedium),
+        disabled: hexToRgba(tokensDark.colorApplicationContrastBackground, tokensDark.opacityApplicationTextContrastLow),
+        icon: hexToRgba(tokensDark.colorApplicationContrastBackground, tokensDark.opacityApplicationIconContrastHigh)
+    },
+    action: {
+        disabledOpacity: tokensDark.opacityApplicationTextContrastLow
+    }
 }
 
 const brandColors = {
@@ -114,6 +136,26 @@ const brandColors = {
         900: tokens.colorBrandNeutral900
     },
 }
+
+const colorNames = ["Neutral", "Blue", "Deepblue", "Grayblue", "Pink", "Purple", "Red", "Green"]
+const shades = ["50", "100", "200", "300", "400", "500", "600", "700", "800", "900"]
+
+colorNames.forEach(color => {
+    var name = color.toLowerCase()
+    var varName = "colorBrand" + color + "500"
+    var varNameContrast = "colorBrand" + color + "Contrast500"
+    var temp = {}
+    temp[name] = { main: tokens[varName], contrastText: hexToRgba(tokens[varNameContrast], tokens.opacityApplicationTextHigh) }
+    Object.assign(brandColors, temp)
+    shades.forEach(shade => {
+        var name = color.toLowerCase() + "-" + shade
+        var varName = "colorBrand" + color + shade
+        var varNameContrast = "colorBrand" + color + "Contrast" + shade
+        var temp = {}
+        temp[name] = { main: tokens[varName], contrastText: hexToRgba(tokens[varNameContrast], tokens.opacityApplicationTextHigh) }
+        Object.assign(brandColors, temp)
+    });
+});
 
 const shape = {
     borderRadius: tokens.sizeShapeRadius
@@ -373,35 +415,35 @@ const componentsCompact = {
 
 let themeCompactLight = createTheme({
     breakpoints: breakpoints,
-    palette: {...paletteLight, ...brandColors},
+    palette: { ...paletteLight, ...brandColors },
     spacing: spacing,
     shape: shape,
     typography: typography,
-    components: {...components, ...componentsCompact}
+    components: { ...components, ...componentsCompact }
 })
 let themeCompactDark = createTheme({
     breakpoints: breakpoints,
-    palette: {...paletteDark, ...brandColors},
+    palette: { ...paletteDark, ...brandColors },
     spacing: spacing,
     shape: shape,
     typography: typography,
-    components: {...components, ...componentsCompact}
+    components: { ...components, ...componentsCompact }
 })
 let themeWideLight = createTheme({
     breakpoints: breakpoints,
-    palette: {...paletteLight, ...brandColors},
+    palette: { ...paletteLight, ...brandColors },
     spacing: spacing,
     shape: shape,
     typography: typography,
-    components: {...components, ...componentsWide}
+    components: { ...components, ...componentsWide }
 })
 let themeWideDark = createTheme({
     breakpoints: breakpoints,
-    palette: {...paletteDark, ...brandColors},
+    palette: { ...paletteDark, ...brandColors },
     spacing: spacing,
     shape: shape,
     typography: typography,
-    components: {...components, ...componentsWide}
+    components: { ...components, ...componentsWide }
 })
 
 /*themeCompact = createTheme(theme, {
@@ -518,3 +560,4 @@ let themeWideDark = createTheme({
 })*/
 
 export { themeCompactLight, themeCompactDark, themeWideLight, themeWideDark };
+export { breakpoints };
