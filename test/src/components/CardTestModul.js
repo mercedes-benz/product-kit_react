@@ -7,70 +7,87 @@ import {
     CardHeader,
     CardContent,
     CardActions,
-    CardMedia
+    CardMedia,
+    Grid,
+    Typography
 } from "@mui/material";
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import pkStyles from "style/styles";
 
 
-export default class CardTestModul extends React.Component {
-    render() {
-        return (
-            <section className="component-section">
-                <div className="section-header">
-                    <Button startIcon={<OpenInNewIcon/>}>
-                        <a 
-                            href="https://material.io/components/cards"
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                        >
-                            Cards
-                        </a>
-                    </Button>
-                    <Button startIcon={<OpenInNewIcon/>}>
-                        <a 
-                            href="https://mui.com/components/cards/"
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                        >
-                            Cards in MUI
-                        </a>
-                    </Button>
-                    
+export default function CardTestModul() {
+    const pkSpacings = pkStyles()
+    return (
+        <section className="component-section">
+            <div className="section-header">
+                <Button startIcon={<OpenInNewIcon />}>
+                    <a
+                        href="https://material.io/components/cards"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Cards
+                    </a>
+                </Button>
+                <Button startIcon={<OpenInNewIcon />}>
+                    <a
+                        href="https://mui.com/components/cards/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Cards in MUI
+                    </a>
+                </Button>
+
+            </div>
+            <div className="component-wrapper">
+                <div className={pkSpacings["my-xs"]}>
+                    <Grid
+                        container
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="center"
+                    >
+                        <Grid item xs={4}>
+                            <Card elevation={24} sx={{ pt: 1 }}>
+                            <Typography sx={{ ml: 2 }} variant="overline">
+                        Overline
+                    </Typography>
+                                <CardHeader
+                                    title="This is the title of the card"
+                                    subheader="This is the subtitle of the card"
+                                />
+                                <CardMedia
+                                    component="img"
+                                    height="200"
+                                    image="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+                                    alt="Landscape provided by unsplash"
+                                />
+                                <CardContent>
+                                    This is the content of the basic card
+                                </CardContent>
+                                <CardActions>
+                                    <Button size="small">Action Button</Button>
+                                </CardActions>
+                            </Card>
+                        </Grid>
+
+                    </Grid>
                 </div>
-                <div className="component-wrapper">
-                    <Card elevation={24}>
-                        <CardHeader
-                            title="This is the title of the card"
-                            subheader="This is the subtitle of the card"
-                        />
-                        <CardMedia
-                            component="img"
-                            height="100"
-                            image="https://upload.wikimedia.org/wikipedia/commons/c/cf/Daimler_TSS_logo.svg"
-                            alt="Daimler TSS Logo - provided by Wikipedia"
-                        />
-                        <CardContent>
-                            This is the content of the basic card
-                            The picture is provided by wikipedia
-                        </CardContent>
-                        <CardActions>
-                            <Button size="small">Action Button</Button>
-                        </CardActions>
-                    </Card>
-                    <Card variant="outlined">
-                        <CardHeader
-                            title="This is the title of the card"
-                            subheader="This is the subtitle of the card"
-                        />
-                        <CardContent>
-                            This is the content of the outlined card
-                        </CardContent>
-                        <CardActions>
-                            <Button size="small">Action Button</Button>
-                        </CardActions>
-                    </Card>
-                </div>
-            </section>
-        );
-    }
+
+                <Card variant="outlined">
+                    <CardHeader
+                        title="This is the title of the card"
+                        subheader="This is the subtitle of the card"
+                    />
+                    <CardContent>
+                        This is the content of the outlined card
+                    </CardContent>
+                    <CardActions>
+                        <Button size="small">Action Button</Button>
+                    </CardActions>
+                </Card>
+            </div>
+        </section>
+    );
 }

@@ -8,14 +8,12 @@ const margins = ["ma", "mt", "mb", "ml", "mr", "mx", "my"]
 const paddings = ["pa", "pt", "pb", "pl", "pr", "px", "py"]
 const sizes = ["3xs", "Xxs", "Xs", "S", "M", "L", "Xl", "Xxl", "3xl"]
 const spacings = {
-    maS: {
-        paddingTop: "100px"
-    },
+
 }
 
 margins.forEach(margin => {
     sizes.forEach(size => {
-        var name = margin + size
+        var name = margin + "-" + size.toLowerCase()
         var rootSpacing = "sizeApplicationSpacingXs" + size
         var sSpacing = "sizeApplicationSpacingS" + size
         var mSpacing = "sizeApplicationSpacingM" + size
@@ -58,7 +56,7 @@ margins.forEach(margin => {
 
 paddings.forEach(padding => {
     sizes.forEach(size => {
-        var name = padding + size
+        var name = padding + "-" + size.toLowerCase()
         var rootSpacing = "sizeApplicationSpacingXs" + size
         var sSpacing = "sizeApplicationSpacingS" + size
         var mSpacing = "sizeApplicationSpacingM" + size
@@ -99,6 +97,6 @@ paddings.forEach(padding => {
     });
 });
 
-const tssStyles = makeStyles((theme) => (spacings));
+const pkStyles = makeStyles((theme) => (spacings));
 
-export default tssStyles
+export default pkStyles

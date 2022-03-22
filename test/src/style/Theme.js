@@ -559,5 +559,12 @@ let themeWideDark = createTheme({
     }
 })*/
 
+/*function getOpacity(state, opacity) {
+    if(state) {
+        return tokens.opacityApplicationIconHigh
+    }
+}*/
+
 export { themeCompactLight, themeCompactDark, themeWideLight, themeWideDark };
 export { breakpoints };
+export { tokens, tokensDark };

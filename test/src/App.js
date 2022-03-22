@@ -3,7 +3,7 @@
 import './App.css';
 import React from 'react';
 import { ThemeProvider } from '@mui/material/styles';
-import { themeCompactLight, themeCompactDark } from "./style/index";
+import { tokens, tokensDark, themeCompactLight, themeCompactDark } from "./style/index";
 import ButtonTestModul from './components/ButtonTestModul';
 import DrawerTestModul from './components/DrawerTestModul';
 import TopAppBarTestModul from "./components/TopAppBarTestModul";
@@ -53,8 +53,8 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function App() {
-    const classes = useStyles();
     const [state, setState] = React.useState(true);
+    const classes = useStyles();
     const switchDarkMode = () => {
         setState(!state)
     }
@@ -68,6 +68,7 @@ export default function App() {
                             edge="start"
                             className={classes.menuButton}
                             color="inherit"
+                            sx={{ opacity: state ? 1 - tokens.opacityApplicationIconHigh : 1 - tokensDark.opacityApplicationIconContrastHigh }}
                             aria-label="Menu">
                             <MenuIcon />
                         </IconButton>

@@ -6,12 +6,12 @@ import {
     CircularProgress
 } from "@mui/material";
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-import tssStyles from "style/styles";
+import pkStyles from "../style/styles";
 
 export default function CircularProgressTestModul() {
-    const tssSpacings = tssStyles()
+    const pkSpacings = pkStyles()
     return (
-        <section className={tssSpacings.pyS}>
+        <section className={pkSpacings["ma-xxl"]}>
             <div className="section-header">
                 <Button startIcon={<OpenInNewIcon />}>
                     <a
