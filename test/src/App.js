@@ -3,7 +3,7 @@
 import './App.css';
 import React from 'react';
 import { ThemeProvider } from '@mui/material/styles';
-import { tokens, tokensDark, themeCompactLight, themeCompactDark } from "./style/index";
+import { themeCompactLight, themeCompactDark } from "./style/index";
 import ButtonTestModul from './components/ButtonTestModul';
 import DrawerTestModul from './components/DrawerTestModul';
 import TopAppBarTestModul from "./components/TopAppBarTestModul";
@@ -68,7 +68,6 @@ export default function App() {
                             edge="start"
                             className={classes.menuButton}
                             color="inherit"
-                            sx={{ opacity: state ? 1 - tokens.opacityApplicationIconHigh : 1 - tokensDark.opacityApplicationIconContrastHigh }}
                             aria-label="Menu">
                             <MenuIcon />
                         </IconButton>

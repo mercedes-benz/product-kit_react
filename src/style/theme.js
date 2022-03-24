@@ -565,6 +565,5 @@ let themeWideDark = createTheme({
     }
 }*/
 
-export { themeCompactLight, themeCompactDark, themeWideLight, themeWideDark };
+export { tokens, tokensDark, themeCompactLight, themeCompactDark, themeWideLight, themeWideDark };
 export { breakpoints };
-export { tokens, tokensDark };

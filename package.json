@@ -25,7 +25,27 @@
   },
   "scripts": {
     "test-start": "(cd test && react-scripts start)",
-    "test-build": "./node_modules/.bin/babel src --out-file index.js"
+    "test-build": "./node_modules/.bin/babel src --out-file index.js",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "engines": {
     "node": "16.x"
