@@ -25,7 +25,7 @@
   },
   "scripts": {
     "test-start": "(cd test && react-scripts start)",
-    "test-build": "./node_modules/.bin/babel src --out-file index.js",
+    "test-build": "./node_modules/.bin/babel src --out-file index.js"
   },
   "engines": {
     "node": "16.x"
