@@ -141,7 +141,7 @@ You can use all custom Daimler TSS colors like `primary` (corporate blue) or `se
 
 <Box sx={{ color: 'secondary.main' }}>Text</Box>
 
-<IconButton sx={{ color: 'grayblue-400.main' }}
+<IconButton sx={{ color: 'grayblue-400.main' }}>
     <MenuIcon />
 </IconButton>
 
@@ -210,7 +210,7 @@ The Daimler TSS application colors like `primary` are also automatically changed
 
 ### Elevation
 
-You can use the `elevation` tag to apply elevation to supported MUI components. In dark mode, the elevation will also change the surface (`paper`) color automatically: Higher elevation, lighter surface, as described in the [Material Design documentation](https://material.io/design/color/dark-theme.html#properties).
+You can use the `elevation` prop to apply elevation to supported MUI components. In dark mode, the elevation will also change the surface (`paper`) color automatically: Higher elevation, lighter surface, as described in the [Material Design documentation](https://material.io/design/color/dark-theme.html#properties).
 
 ## Contributing
 
