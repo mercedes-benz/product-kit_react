@@ -1,0 +1,12 @@
+Copyright 2022
+
+[product-kit-react : 1.0.0]
+
+Phase: RELEASED
+Distribution: OPENSOURCE
+
+Components: 
+
+
+Licenses: 
+
