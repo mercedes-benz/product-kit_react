@@ -3,7 +3,7 @@
 import './App.css';
 import React from 'react';
 import { ThemeProvider } from '@mui/material/styles';
-import { themeCompactLight, themeCompactDark } from "./style/index";
+import { themeCompactLight, themeCompactDark } from '@daimler/productkit-react/';
 import ButtonTestModul from './components/ButtonTestModul';
 import DrawerTestModul from './components/DrawerTestModul';
 import TopAppBarTestModul from "./components/TopAppBarTestModul";
@@ -38,7 +38,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { AppBar, FormControlLabel, FormGroup, IconButton, Switch, Toolbar, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { makeStyles } from "@mui/styles";
- 
+
 const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1,

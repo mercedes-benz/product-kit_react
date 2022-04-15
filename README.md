@@ -54,7 +54,7 @@ You can choose between those themes and import the one that suits your use-case 
 //in src/App.js
 
 import { ThemeProvider } from "@mui/material/styles";
-import { themeCompactLight } from "@daimler/productkit-react/src/index"; //you may also use the other themes
+import { themeCompactLight } from "@daimler/productkit-react"; //you may also use the other themes
 import CssBaseline from "@mui/material/CssBaseline";
 ```
 
@@ -87,17 +87,16 @@ Next, import the fonts `Source Sans Pro` and `Source Code Pro`:
 />
 ```
 
-Product Kit React also provides responsive spacings from [Product Kit Core](https://github.com/mercedes-benz/product-kit_core) with `makeStyles`. You can use them by importing the `pkStyles` object in the component and using it inside a component function. More on spacings in the "Usage" section.
+Product Kit React also provides responsive spacings from [Product Kit Core](https://github.com/mercedes-benz/product-kit_core). You can use them by importing the `scaledSpacings` function in the component and using it inside the sx prop of a component. More on spacings in the "Usage" section.
 
 ```javascript
 // in MyComponent.js
 
-import pkStyles from "@daimler/productkit-react/src/styles";
+import { scaledSpacing } from '@daimler/productkit-react'
 
 export default function MyComponent() {
-    const pkSpacings = pkStyles()
     return (
-        <section className={pkSpacings["mt-xxl"]}>
+        <Grid sx={{ ...scaledSpacing("mt", "xxl") }}>
             <!-- this section now has a responsive top-margin of size XXL -->
         </section>
     );
@@ -109,20 +108,23 @@ Advanced: By importing `tokens` and `tokensDark`, you can also use the core vari
 ```javascript
 // in App.js
 
-import { tokens, tokensDark } from "@daimler/productkit-react/src/index";
+import { tokens, tokensDark } from "@daimler/productkit-react";
 
 export default function App() {
-    return (
-        <IconButton
-            color="inherit"
-            sx={{ opacity: state ? 1 - tokens.opacityApplicationIconHigh : 1 - tokensDark.opacityApplicationIconContrastHigh }}
-        >
-            <MenuIcon />
-        </IconButton>
-    );
+  return (
+    <IconButton
+      color="inherit"
+      sx={{
+        opacity: state
+          ? 1 - tokens.opacityApplicationIconHigh
+          : 1 - tokensDark.opacityApplicationIconContrastHigh,
+      }}
+    >
+      <MenuIcon />
+    </IconButton>
+  );
 }
 ```
-
 
 Your MUI components are now styled accordingly to the styleguide of Daimler TSS!
 
@@ -157,9 +159,21 @@ Note that you have to set `color="inherit"` when using icons on colored backgrou
 
 ### Spacing
 
-The standard way of applying spacing in Vuetify is adding for example `sx={{ m: 2 }}` for a margin of `16px` from the `sx` breakpoint on. With Product Kit React, you are now also able to use custom and responsive spacings for `padding` and `margin` by applying t-shirt sizes (`3xs`, `xxs`, `xs`, `s`, `m`, `l`, `xl`, `xxl`, `3xl`) instead of absolute numbers. The spacing will now be responsive regarding the width of the screen. Please refer to the "Installation & Setup" section for more information on how to setup.
+The standard way of applying spacing in MUI is adding for example `m={2}` or `sx={{ m: 2 }}` for a margin of `16px` (2 \* 8). With Product Kit React, you are now also able to use custom and responsive spacings for `padding` and `margin` by applying t-shirt sizes (`3xs`, `xxs`, `xs`, `s`, `m`, `l`, `xl`, `xxl`, `3xl`) instead of absolute numbers. The spacing will be responsive regarding the width of the screen according to the spacing scale of [Product Kit Core](https://github.com/mercedes-benz/product-kit_core).
 
-When using `MuiGrids`
+```javascript
+// in MyComponent.js
+
+import { scaledSpacing } from '@daimler/productkit-react'
+
+export default function MyComponent() {
+    return (
+        <Box sx={{ ...scaledSpacing("px", "3xs") }}>
+            <!-- this section now has a responsive padding-left and padding-right of size 3xs -->
+        </section>
+    );
+}
+```
 
 > For further information on MUI spacings visit the [MUI Spacing Documentation](https://mui.com/system/spacing/). Information on responsive spacings with t-shirt sizes can be found in [Product Kit Core](https://github.com/mercedes-benz/product-kit_core)
 
@@ -204,7 +218,6 @@ export default function App() {
     );
 }
 ```
-
 
 The Daimler TSS application colors like `primary` are also automatically changed when switching to dark mode (see examples).
 

@@ -28,11 +28,8 @@ const breakpoints = {
 
 const paletteLight = {
     mode: "light",
-    // palette values for light mode
     primary: {
-        //light: tokens.colorApplicationPrimary,
         main: tokens.colorApplicationPrimary,
-        //dark: tokens.colorApplicationPrimary,
         contrastText: hexToRgba(tokens.colorApplicationContrastPrimary, tokens.opacityApplicationTextContrastHigh)
     },
     secondary: {
@@ -75,12 +72,8 @@ const paletteLight = {
 
 const paletteDark = {
     mode: "dark",
-
-    // palette values for dark mode
     primary: {
-        //light: tokensDark.colorApplicationPrimary,
         main: tokensDark.colorApplicationPrimary,
-        //dark: tokensDark.colorApplicationPrimary,
         contrastText: hexToRgba(tokensDark.colorApplicationContrastPrimary, tokensDark.opacityApplicationTextContrastHigh)
     },
     secondary: {
@@ -328,8 +321,90 @@ const typography = {
     },
 }
 
+const spacingXs = {
+    "3xs": tokens.sizeApplicationSpacingXs3xs,
+    "xxs": tokens.sizeApplicationSpacingXsXxs,
+    "xs": tokens.sizeApplicationSpacingXsXs,
+    "s": tokens.sizeApplicationSpacingXsS,
+    "m": tokens.sizeApplicationSpacingXsM,
+    "l": tokens.sizeApplicationSpacingXsL,
+    "xl": tokens.sizeApplicationSpacingXsXl,
+    "xxl": tokens.sizeApplicationSpacingXsXxl,
+    "3xl": tokens.sizeApplicationSpacingXs3xl,
+}
+const spacingsS = {
+    "3xs": tokens.sizeApplicationSpacingS3xs,
+    "xxs": tokens.sizeApplicationSpacingSXxs,
+    "xs": tokens.sizeApplicationSpacingSXs,
+    "s": tokens.sizeApplicationSpacingSS,
+    "m": tokens.sizeApplicationSpacingSM,
+    "l": tokens.sizeApplicationSpacingSL,
+    "xl": tokens.sizeApplicationSpacingSXl,
+    "xxl": tokens.sizeApplicationSpacingSXxl,
+    "3xl": tokens.sizeApplicationSpacingS3xl,
+}
+const spacingsM = {
+    "3xs": tokens.sizeApplicationSpacingM3xs,
+    "xxs": tokens.sizeApplicationSpacingMXxs,
+    "xs": tokens.sizeApplicationSpacingMXs,
+    "s": tokens.sizeApplicationSpacingMS,
+    "m": tokens.sizeApplicationSpacingMM,
+    "l": tokens.sizeApplicationSpacingML,
+    "xl": tokens.sizeApplicationSpacingMXl,
+    "xxl": tokens.sizeApplicationSpacingMXxl,
+    "3xl": tokens.sizeApplicationSpacingM3xl,
+}
+const spacingsL = {
+    "3xs": tokens.sizeApplicationSpacingL3xs,
+    "xxs": tokens.sizeApplicationSpacingLXxs,
+    "xs": tokens.sizeApplicationSpacingLXs,
+    "s": tokens.sizeApplicationSpacingLS,
+    "m": tokens.sizeApplicationSpacingLM,
+    "l": tokens.sizeApplicationSpacingLL,
+    "xl": tokens.sizeApplicationSpacingLXl,
+    "xxl": tokens.sizeApplicationSpacingLXxl,
+    "3xl": tokens.sizeApplicationSpacingL3xl,
+}
+const spacingsXl = {
+    "3xs": tokens.sizeApplicationSpacingXl3xs,
+    "xxs": tokens.sizeApplicationSpacingXlXxs,
+    "xs": tokens.sizeApplicationSpacingXlXs,
+    "s": tokens.sizeApplicationSpacingXlS,
+    "m": tokens.sizeApplicationSpacingXlM,
+    "l": tokens.sizeApplicationSpacingXlL,
+    "xl": tokens.sizeApplicationSpacingXlXl,
+    "xxl": tokens.sizeApplicationSpacingXlXxl,
+    "3xl": tokens.sizeApplicationSpacingXl3xl,
+}
+
+const spacings = {
+    xs: spacingXs,
+    s: spacingsS,
+    m: spacingsM,
+    l: spacingsL,
+    xl: spacingsXl
+}
+
+const brandSpacings = {
+    0: 0,
+    0.5: tokens.sizeSpaceHalfx,
+    1: tokens.sizeSpace1x,
+    2: tokens.sizeSpace2x,
+    3: tokens.sizeSpace3x,
+    4: tokens.sizeSpace4x,
+    6: tokens.sizeSpace6x,
+    8: tokens.sizeSpace8x,
+    9: tokens.sizeSpace9x,
+    10: tokens.sizeSpace10x,
+    11: tokens.sizeSpace11x,
+    12: tokens.sizeSpace12x,
+    16: tokens.sizeSpace16x,
+    24: tokens.sizeSpace24x,
+}
+
 const spacing = function (value) {
-    return `${8 * value}px`
+    if (brandSpacings[value]) return brandSpacings[value]
+    return 0
 }
 
 const components = {
@@ -446,124 +521,4 @@ let themeWideDark = createTheme({
     components: { ...components, ...componentsWide }
 })
 
-/*themeCompact = createTheme(theme, {
-    overrides: {
-        MuiCssBaseline: {
-            '@global': {
-                '.Mui-selected': {
-                    fontWeight: 'bold',
-                    color: secondaryColor
-                }
-            }
-        },
-        MuiBackdrop: {
-            root: {
-                backgroundColor: 'rgba(255, 255, 255, 0.8)'
-            }
-        },
-        MuiButton: {
-            containedPrimary: {
-                backgroundColor: primaryButtonColor
-            },
-            outlined: {
-                fontSize: '16px',
-                letterSpacing: '1.25px',
-                padding: '10px 16px',
-                lineHeight: '16px'
-            },
-            outlinedPrimary: {
-                color: primaryButtonColor,
-                border: '1px solid ' + primaryButtonColor,
-            },
-            textPrimary: {
-                fontSize: '16px',
-                color: primaryButtonColor
-            },
-            root: {
-                borderRadius: 0,
-                minWidth: '141px'
-            },
-            text: {
-                textTransform: 'none'
-            }
-        },
-        MuiDialog: {
-            paperWidthSm: {
-                maxWidth: '818px'
-            }
-        },
-        MuiDialogTitle: {
-            root: {
-                backgroundColor: primaryColor,
-                color: "#FFFFFF"
-            }
-        },
-        MuiDialogContentText: {
-            root: {
-                color: primaryColor
-            }
-        },
-        MuiDialogActions: {
-            root: {
-                padding: '24px 36px 24px 36px'
-            }
-        },
-        MuiFormControlLabel: {
-            root: {
-                alignItems: 'flex-start',
-                marginTop: '9px'
-            }
-        },
-        MuiToolbar: {
-            root: {
-                height: '100%'
-            }
-        },
-        MuiTabs: {
-            root: {
-                height: '100%'
-            },
-            flexContainer: {
-                height: '100%'
-            },
-            indicator: {
-                height: '3px'
-            }
-        },
-        MuiTab: {
-            root: {
-                textTransform: 'none',
-                height: '100%',
-                minWidth: '0px',
-                letterSpacing: '0.5px'
-            },
-            textColorInherit: {
-                opacity: 1
-            }
-        },
-        MuiCard: {
-            root: {
-                backgroundColor: primaryColor,
-                color: '#FFFFFF',
-                height: '447px',
-                borderRadius: '5px 100px 5px 100px'
-            }
-        },
-        MuiAccordionDetails: {
-            root: {
-                backgroundColor: '#DDDDDD',
-                color: primaryColor,
-                opacity: 0.74
-            }
-        }
-    }
-})*/
-
-/*function getOpacity(state, opacity) {
-    if(state) {
-        return tokens.opacityApplicationIconHigh
-    }
-}*/
-
-export { tokens, tokensDark, themeCompactLight, themeCompactDark, themeWideLight, themeWideDark };
-export { breakpoints };
+export { breakpoints, tokens, tokensDark, themeCompactLight, themeCompactDark, themeWideLight, themeWideDark, spacings }
