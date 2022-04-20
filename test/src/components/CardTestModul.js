@@ -9,14 +9,14 @@ import {
     CardActions,
     CardMedia,
     Grid,
-    Typography
+    Typography,
+    Box
 } from "@mui/material";
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-import pkStyles from "style/styles";
+import { scaledSpacing } from '@daimler/productkit-react';
 
 
 export default function CardTestModul() {
-    const pkSpacings = pkStyles()
     return (
         <section className="component-section">
             <div className="section-header">
@@ -41,7 +41,7 @@ export default function CardTestModul() {
 
             </div>
             <div className="component-wrapper">
-                <div className={pkSpacings["my-xs"]}>
+                <Box sx={{ ...scaledSpacing("my", "xs") }}>
                     <Grid
                         container
                         direction="row"
@@ -49,13 +49,14 @@ export default function CardTestModul() {
                         alignItems="center"
                     >
                         <Grid item xs={4}>
-                            <Card elevation={24} sx={{ pt: 1 }}>
-                            <Typography sx={{ ml: 2 }} variant="overline">
-                        Overline
-                    </Typography>
+                            <Card elevation={24} sx={{ ...scaledSpacing("pt", "xs") }}>
+                                <Typography sx={{ ...scaledSpacing("ml", "xs") }} variant="overline">
+                                    Overline
+                                </Typography>
                                 <CardHeader
                                     title="This is the title of the card"
                                     subheader="This is the subtitle of the card"
+                                    sx={{ ...scaledSpacing("px", "xs") }}
                                 />
                                 <CardMedia
                                     component="img"
@@ -73,7 +74,7 @@ export default function CardTestModul() {
                         </Grid>
 
                     </Grid>
-                </div>
+                </Box>
 
                 <Card variant="outlined">
                     <CardHeader
@@ -88,6 +89,6 @@ export default function CardTestModul() {
                     </CardActions>
                 </Card>
             </div>
-        </section>
+        </section >
     );
 }

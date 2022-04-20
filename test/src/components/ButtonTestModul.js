@@ -1,18 +1,16 @@
 // SPDX-License-Identifier: MIT 
 
 import React from "react";
-import {
-    Button, Grid
-} from "@mui/material";
-
+import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
 import EditIcon from '@mui/icons-material/Edit';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import AddIcon from '@mui/icons-material/Add';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-import pkStyles from "../style/styles";
+import Box from '@mui/material/Box'
+import { scaledSpacing } from '@daimler/productkit-react'
 
 export default function ButtonTestModul() {
-    const pkSpacings = pkStyles()
     return (
         <section className="component-section">
             <div className="section-header">
@@ -36,8 +34,8 @@ export default function ButtonTestModul() {
                 </Button>
 
             </div>
-            <div className={pkSpacings["my-xxs"]}>
-                <div className={pkSpacings["my-xxs"]}>
+            <Box sx={{ ...scaledSpacing("my", "xxs") }}>
+                <Box sx={{ ...scaledSpacing("my", "xxs") }}>
                     <Grid
                         container
                         direction="row"
@@ -60,8 +58,8 @@ export default function ButtonTestModul() {
                             </Button>
                         </Grid>
                     </Grid>
-                </div>
-                <div className={pkSpacings["my-xxs"]}>
+                </Box>
+                <Box sx={{ ...scaledSpacing("my", "xxs") }}>
                     <Grid
                         container
                         direction="row"
@@ -84,8 +82,8 @@ export default function ButtonTestModul() {
                             </Button>
                         </Grid>
                     </Grid>
-                </div>
-            </div>
+                </Box>
+            </Box>
         </section >
     );
 }

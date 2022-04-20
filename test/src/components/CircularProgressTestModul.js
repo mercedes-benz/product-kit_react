@@ -1,17 +1,15 @@
 // SPDX-License-Identifier: MIT 
 
 import React from "react";
-import {
-    Button,
-    CircularProgress
-} from "@mui/material";
+import Button from "@mui/material/Button";
+import CircularProgress from "@mui/material/CircularProgress";
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-import pkStyles from "../style/styles";
+import Box from "@mui/material/Box";
+import { scaledSpacing } from '@daimler/productkit-react';
 
 export default function CircularProgressTestModul() {
-    const pkSpacings = pkStyles()
     return (
-        <section className={pkSpacings["ma-xxl"]}>
+        <Box sx={{ ...scaledSpacing("m", "xxl") }} >
             <div className="section-header">
                 <Button startIcon={<OpenInNewIcon />}>
                     <a
@@ -32,6 +30,6 @@ export default function CircularProgressTestModul() {
                 <CircularProgress variant="determinate" value={50} color="secondary" />
                 <CircularProgress variant="determinate" value={50} color="success" />
             </div>
-        </section>
+        </Box >
     );
 }
