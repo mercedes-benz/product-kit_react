@@ -2,7 +2,7 @@
 
 import './App.css';
 import React from 'react';
-import { ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { themeCompactLight, themeCompactDark } from '@daimler/productkit-react/';
 import ButtonTestModul from './components/ButtonTestModul';
 import DrawerTestModul from './components/DrawerTestModul';
@@ -50,16 +50,18 @@ const useStyles = makeStyles(theme => ({
     title: {
         flexGrow: 1
     }
-}));
+}))
 
 export default function App() {
-    const [state, setState] = React.useState(true);
-    const classes = useStyles();
+    const [state, setState] = React.useState(true)
+    const muiThemeLight = createTheme(themeCompactLight)
+    const muiThemeDark = createTheme(themeCompactDark)
+    const classes = useStyles()
     const switchDarkMode = () => {
         setState(!state)
     }
     return (
-        <ThemeProvider theme={state ? themeCompactLight : themeCompactDark}>
+        <ThemeProvider theme={state ? muiThemeLight : muiThemeDark}>
             <CssBaseline enableColorScheme />
             <div className={classes.root}>
                 <AppBar position="sticky" color='primary'>
@@ -113,5 +115,5 @@ export default function App() {
                 </main>
             </div>
         </ThemeProvider>
-    );
+    )
 }
