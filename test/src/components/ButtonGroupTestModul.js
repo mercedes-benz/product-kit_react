@@ -4,8 +4,14 @@ import React from "react";
 import {
     Button,
     ButtonGroup,
+    Grid,
+    Box
 } from "@mui/material";
+import { scaledSpacing } from '@daimler/productkit-react'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import EditIcon from '@mui/icons-material/Edit';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import AddIcon from '@mui/icons-material/Add';
 
 export default class ButtonGroupTestModul extends React.Component {
     render() {
@@ -23,62 +29,136 @@ export default class ButtonGroupTestModul extends React.Component {
                     </Button>
 
                 </div>
-                <div className="component-wrapper">
-                    <ButtonGroup
-                        variant="contained"
-                        color="error"
+                <Box sx={{ ...scaledSpacing("my", "xs") }}>
+                    <Grid
+                        container
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="center"
+                        sx={{ ...scaledSpacing("gap", "xs") }}
                     >
-                        <Button>One</Button>
-                        <Button>Two</Button>
-                        <Button>Three</Button>
-                    </ButtonGroup>
-                    <ButtonGroup
-                        variant="outlined"
-                        size="small"
-                        color="secondary"
+                        <ButtonGroup
+                            variant="contained"
+                        >
+                            <Button>One</Button>
+                            <Button>Two</Button>
+                            <Button>Three</Button>
+                        </ButtonGroup>
+                        <ButtonGroup
+                            variant="text"
+                        >
+                            <Button>One</Button>
+                            <Button>Two</Button>
+                            <Button>Three</Button>
+                        </ButtonGroup>
+                        <ButtonGroup
+                            variant="outlined"
+                        >
+                            <Button>One</Button>
+                            <Button>Two</Button>
+                            <Button>Three</Button>
+                        </ButtonGroup>
+                    </Grid>
+                </Box>
+                <Box sx={{ ...scaledSpacing("my", "xs") }}>
+                    <Grid
+                        container
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="center"
+                        sx={{ ...scaledSpacing("gap", "xs") }}
                     >
-                        <Button>Small One</Button>
-                        <Button>Small Two</Button>
-                        <Button>Small Three</Button>
-                    </ButtonGroup>
-                    <ButtonGroup
-                        variant="text"
-                        size="large"
+                        <ButtonGroup
+                            variant="contained"
+                        >
+                            <Button startIcon={<EditIcon />}>Edit</Button>
+                            <Button startIcon={<FavoriteIcon />}>Favorite</Button>
+                            <Button startIcon={<AddIcon />}>Add</Button>
+                        </ButtonGroup>
+                        <ButtonGroup
+                            variant="text"
+                        >
+                            <Button startIcon={<EditIcon />}>Edit</Button>
+                            <Button startIcon={<FavoriteIcon />}>Favorite</Button>
+                            <Button startIcon={<AddIcon />}>Add</Button>
+                        </ButtonGroup>
+                        <ButtonGroup
+                            variant="outlined"
+                        >
+                            <Button startIcon={<EditIcon />}>Edit</Button>
+                            <Button startIcon={<FavoriteIcon />}>Favorite</Button>
+                            <Button startIcon={<AddIcon />}>Add</Button>
+                        </ButtonGroup>
+                    </Grid>
+                </Box>
+                <Box sx={{ ...scaledSpacing("my", "xs") }}>
+                    <Grid
+                        container
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="center"
+                        sx={{ ...scaledSpacing("gap", "xs") }}
                     >
-                        <Button>Large One</Button>
-                        <Button>Large Two</Button>
-                        <Button>Large Three</Button>
-                    </ButtonGroup>
-
-                    <ButtonGroup
-                        orientation="vertical"
-                        variant="contained"
-                        color="tertiary"
+                        <ButtonGroup
+                            variant="contained"
+                            color="secondary"
+                        >
+                            <Button>One</Button>
+                            <Button>Two</Button>
+                            <Button>Three</Button>
+                        </ButtonGroup>
+                        <ButtonGroup
+                            variant="text"
+                            color="secondary"
+                        >
+                            <Button>One</Button>
+                            <Button>Two</Button>
+                            <Button>Three</Button>
+                        </ButtonGroup>
+                        <ButtonGroup
+                            variant="outlined"
+                            color="secondary"
+                        >
+                            <Button>One</Button>
+                            <Button>Two</Button>
+                            <Button>Three</Button>
+                        </ButtonGroup>
+                    </Grid>
+                </Box>
+                <Box sx={{ ...scaledSpacing("my", "xs") }}>
+                    <Grid
+                        container
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="center"
+                        sx={{ ...scaledSpacing("gap", "xs") }}
                     >
-                        <Button>One</Button>
-                        <Button>Two</Button>
-                        <Button>Three</Button>
-                    </ButtonGroup>
-                    <ButtonGroup
-                        variant="outlined"
-                        orientation="vertical"
-                        size="small"
-                        color="secondary"
-                    >
-                        <Button>Small One</Button>
-                        <Button>Small Two</Button>
-                        <Button>Small Three</Button>
-                    </ButtonGroup>
-                    <ButtonGroup
-                        variant="text"
-                        orientation="vertical"
-                        size="large"
-                    >
-                        <Button>Large One</Button>
-                        <Button>Large Two</Button>
-                        <Button>Large Three</Button>
-                    </ButtonGroup>
-                </div>
+                        <ButtonGroup
+                            variant="contained"
+                            color="secondary"
+                        >
+                            <Button startIcon={<EditIcon />}>Edit</Button>
+                            <Button startIcon={<FavoriteIcon />}>Favorite</Button>
+                            <Button startIcon={<AddIcon />}>Add</Button>
+                        </ButtonGroup>
+                        <ButtonGroup
+                            variant="text"
+                            color="secondary"
+                        >
+                            <Button startIcon={<EditIcon />}>Edit</Button>
+                            <Button startIcon={<FavoriteIcon />}>Favorite</Button>
+                            <Button startIcon={<AddIcon />}>Add</Button>
+                        </ButtonGroup>
+                        <ButtonGroup
+                            variant="outlined"
+                            color="secondary"
+                        >
+                            <Button startIcon={<EditIcon />}>Edit</Button>
+                            <Button startIcon={<FavoriteIcon />}>Favorite</Button>
+                            <Button startIcon={<AddIcon />}>Add</Button>
+                        </ButtonGroup>
+                    </Grid>
+                </Box>
             </section>
         );
     }

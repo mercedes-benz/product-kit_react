@@ -4,7 +4,7 @@ import { paletteLight, paletteDark } from "./color/colors"
 import { spacing } from "./spacing/spacings"
 import { typography } from "./typography/typography"
 import { breakpoints } from './breakpoints/breakpoints'
-import { components } from './components/components'
+import { componentsLight, componentsDark } from './components/components'
 
 const shape = {
     borderRadius: tokens.sizeShapeRadius
@@ -68,7 +68,7 @@ const themeCompactLight = {
     spacing: spacing,
     shape: shape,
     typography: typography,
-    components: { ...components, ...componentsCompact }
+    components: { ...componentsLight, ...componentsCompact }
 }
 const themeCompactDark = {
     breakpoints: breakpoints,
@@ -76,7 +76,7 @@ const themeCompactDark = {
     spacing: spacing,
     shape: shape,
     typography: typography,
-    components: { ...components, ...componentsCompact }
+    components: { ...componentsDark, ...componentsCompact }
 }
 const themeWideLight = {
     breakpoints: breakpoints,
@@ -84,7 +84,7 @@ const themeWideLight = {
     spacing: spacing,
     shape: shape,
     typography: typography,
-    components: { ...components, ...componentsWide }
+    components: { ...componentsLight, ...componentsWide }
 }
 const themeWideDark = {
     breakpoints: breakpoints,
@@ -92,7 +92,7 @@ const themeWideDark = {
     spacing: spacing,
     shape: shape,
     typography: typography,
-    components: { ...components, ...componentsWide }
+    components: { ...componentsDark, ...componentsWide }
 }
 
 export { themeCompactLight, themeCompactDark, themeWideLight, themeWideDark }
