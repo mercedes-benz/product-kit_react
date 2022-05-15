@@ -1,3 +1,4 @@
+// @ts-nocheck
 // SPDX-License-Identifier: MIT 
 
 import './App.css';
