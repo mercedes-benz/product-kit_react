@@ -1,20 +1,18 @@
-import * as tokens from "@daimler/productkit-core/exports/web/styles/mbti/js/variables.js"
+import * as tokens from "@daimler/productkit-core/dist/web/styles/mbti/js/variables"
 
 const breakpoints = {
   values: {
     xs: tokens.layoutApplicationCompactXsScreenMinWidth,
-    sm: tokens.layoutApplicationCompactSScreenMinWidth,
     s: tokens.layoutApplicationCompactSScreenMinWidth,
-    md: tokens.layoutApplicationCompactMScreenMinWidth,
     m: tokens.layoutApplicationCompactMScreenMinWidth,
-    lg: tokens.layoutApplicationCompactLScreenMinWidth,
     l: tokens.layoutApplicationCompactLScreenMinWidth,
     xl: tokens.layoutApplicationCompactXlScreenMinWidth,
     xxl: tokens.layoutApplicationCompactXxlScreenMinWidth
   },
   up: function (value) {
     return '@media (min-width: ' + this.values[value] + ')'
-  }
+  },
+  unit: ''
 }
 
 export { breakpoints }

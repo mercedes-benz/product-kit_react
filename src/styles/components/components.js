@@ -1,31 +1,86 @@
 // @ts-nocheck
-import * as tokens from "@daimler/productkit-core/exports/web/styles/mbti/js/variables.js"
-import * as tokensDark from "@daimler/productkit-core/exports/web/styles/mbti/js/variables-dark.js"
+import * as tokensLight from '@daimler/productkit-core/dist/web/styles/mbti/js/variables'
+import * as tokensDark from '@daimler/productkit-core/dist/web/styles/mbti/js/variables-dark'
+import { breakpoints } from '../breakpoints/breakpoints'
 
-const componentsLight = {
-  MuiButton: {
-    styleOverrides: {
-      textPrimary: {
-        color: tokens.componentButtonTextPrimaryDefaultTextColor
+const createComponentStyles = (tokens) => {
+  return {
+    MuiContainer: {
+      defaultProps: {
+        disableGutters: true,
+        variant: 'compact',
       },
-      outlinedPrimary: {
-        color: tokens.componentButtonOutlinedPrimaryDefaultTextColor
-      }
-    }
-  },
+      variants: [
+        {
+          props: { variant: 'compact' },
+          style: {
+            width: tokens.layoutApplicationCompactXsContentWidth,
+            maxWidth: tokens.layoutApplicationCompactXsContentMaxWidth,
+            [breakpoints.up('s')]: {
+              width: tokens.layoutApplicationCompactSContentWidth,
+              maxWidth: tokens.layoutApplicationCompactSContentMaxWidth,
+            },
+            [breakpoints.up('m')]: {
+              width: tokens.layoutApplicationCompactMContentWidth,
+              maxWidth: tokens.layoutApplicationCompactMContentMaxWidth,
+            },
+            [breakpoints.up('l')]: {
+              width: tokens.layoutApplicationCompactLContentWidth,
+              maxWidth: tokens.layoutApplicationCompactLContentMaxWidth,
+            },
+            [breakpoints.up('xl')]: {
+              width: tokens.layoutApplicationCompactXlContentWidth,
+              maxWidth: tokens.layoutApplicationCompactXlContentMaxWidth,
+            },
+            [breakpoints.up('xxl')]: {
+              width: tokens.layoutApplicationCompactXxlContentWidth,
+              maxWidth: tokens.layoutApplicationCompactXxlContentMaxWidth,
+            },
+          },
+        },
+        {
+          props: { variant: 'wide' },
+          style: {
+            width: tokens.layoutApplicationWideXsContentWidth,
+            maxWidth: tokens.layoutApplicationWideXsContentMaxWidth,
+            [breakpoints.up('s')]: {
+              width: tokens.layoutApplicationWideSContentWidth,
+              maxWidth: tokens.layoutApplicationWideSContentMaxWidth,
+            },
+            [breakpoints.up('m')]: {
+              width: tokens.layoutApplicationWideMContentWidth,
+              maxWidth: tokens.layoutApplicationWideMContentMaxWidth,
+            },
+            [breakpoints.up('l')]: {
+              width: tokens.layoutApplicationWideLContentWidth,
+              maxWidth: tokens.layoutApplicationWideLContentMaxWidth,
+            },
+            [breakpoints.up('xl')]: {
+              width: tokens.layoutApplicationWideXlContentWidth,
+              maxWidth: tokens.layoutApplicationWideXlContentMaxWidth,
+            },
+            [breakpoints.up('xxl')]: {
+              width: tokens.layoutApplicationWideXxlContentWidth,
+              maxWidth: tokens.layoutApplicationWideXxlContentMaxWidth,
+            },
+          },
+        },
+      ],
+    },
+    MuiButton: {
+      styleOverrides: {
+        textPrimary: {
+          color: tokens.componentButtonTextPrimaryDefaultTextColor,
+        },
+        outlinedPrimary: {
+          color: tokens.componentButtonOutlinedPrimaryDefaultTextColor,
+        },
+      },
+    },
+  }
 }
 
-const componentsDark = {
-  MuiButton: {
-    styleOverrides: {
-      textPrimary: {
-        color: tokensDark.componentButtonTextPrimaryDefaultTextColor
-      },
-      outlinedPrimary: {
-        color: tokensDark.componentButtonOutlinedPrimaryDefaultTextColor
-      }
-    }
-  },
-}
+const componentsLight = createComponentStyles(tokensLight)
+const componentsDark = createComponentStyles(tokensDark)
 
 export { componentsLight, componentsDark }
