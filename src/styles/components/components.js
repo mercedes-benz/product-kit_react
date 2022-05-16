@@ -1,6 +1,7 @@
 // @ts-nocheck
 import * as tokensLight from '@daimler/productkit-core/dist/web/styles/mbti/js/variables'
 import * as tokensDark from '@daimler/productkit-core/dist/web/styles/mbti/js/variables-dark'
+import { hexToRgba } from '../../utils/js/color'
 import { breakpoints } from '../breakpoints/breakpoints'
 
 const createComponentStyles = (tokens) => {
@@ -87,6 +88,11 @@ const createComponentStyles = (tokens) => {
         },
       },
     },
+    MuiStack: {
+      defaultProps: {
+        direction: 'row',
+      },
+    },
     MuiButton: {
       styleOverrides: {
         textPrimary: {
@@ -113,6 +119,27 @@ const createComponentStyles = (tokens) => {
           },
           '&.MuiCheckbox-indeterminate': {
             color: tokens.componentCheckboxPrimaryCheckedColor,
+          },
+        },
+      },
+    },
+    MuiChip: {
+      styleOverrides: {
+        root: {
+          fontFamily: tokens.fontApplicationSBody2FontFamily,
+          fontWeight: tokens.fontApplicationSBody2FontWeight,
+          fontSize: tokens.fontApplicationSBody2FontSize,
+          letterSpacing: tokens.fontApplicationSBody2LetterSpacing,
+          textTransform: tokens.fontApplicationSBody2TextTransform,
+          lineHeight: tokens.fontApplicationSBody2LineHeight,
+        },
+        outlinedPrimary: {
+          color: tokens.componentChipOutlinedPrimaryTextColor,
+        },
+        deleteIconOutlinedColorPrimary: {
+          color: tokens.componentChipOutlinedPrimaryDeleteIconDefaultColor,
+          '&:hover': {
+            color: tokens.componentChipOutlinedPrimaryDeleteIconHoverColor,
           },
         },
       },
