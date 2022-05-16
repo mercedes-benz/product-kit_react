@@ -1,5 +1,5 @@
-import * as tokens from "@daimler/productkit-core/dist/web/styles/mbti/js/variables";
-import { breakpoints } from "../breakpoints/breakpoints";
+import * as tokens from '@daimler/productkit-core/dist/web/styles/mbti/js/variables'
+import { breakpoints } from '../breakpoints/breakpoints'
 
 const typography = {
   fontWeightRegular: tokens.fontWeightRegular,
@@ -11,7 +11,7 @@ const typography = {
     lineHeight: tokens.fontApplicationSHeadline1LineHeight,
     letterSpacing: tokens.fontApplicationSHeadline1LetterSpacing,
     textTransform: tokens.fontApplicationSHeadline1TextTransform,
-    [breakpoints.up("l")]: {
+    [breakpoints.up('l')]: {
       fontFamily: tokens.fontApplicationLHeadline1FontFamily,
       fontSize: tokens.fontApplicationLHeadline1FontSize,
       fontWeight: tokens.fontApplicationLHeadline1FontWeight,
@@ -27,7 +27,7 @@ const typography = {
     lineHeight: tokens.fontApplicationSHeadline2LineHeight,
     letterSpacing: tokens.fontApplicationSHeadline2LetterSpacing,
     textTransform: tokens.fontApplicationSHeadline2TextTransform,
-    [breakpoints.up("l")]: {
+    [breakpoints.up('l')]: {
       fontFamily: tokens.fontApplicationLHeadline2FontFamily,
       fontSize: tokens.fontApplicationLHeadline2FontSize,
       fontWeight: tokens.fontApplicationLHeadline2FontWeight,
@@ -43,7 +43,7 @@ const typography = {
     lineHeight: tokens.fontApplicationSHeadline3LineHeight,
     letterSpacing: tokens.fontApplicationSHeadline3LetterSpacing,
     textTransform: tokens.fontApplicationSHeadline3TextTransform,
-    [breakpoints.up("l")]: {
+    [breakpoints.up('l')]: {
       fontFamily: tokens.fontApplicationLHeadline3FontFamily,
       fontSize: tokens.fontApplicationLHeadline3FontSize,
       fontWeight: tokens.fontApplicationLHeadline3FontWeight,
@@ -59,7 +59,7 @@ const typography = {
     lineHeight: tokens.fontApplicationSHeadline4LineHeight,
     letterSpacing: tokens.fontApplicationSHeadline4LetterSpacing,
     textTransform: tokens.fontApplicationSHeadline4TextTransform,
-    [breakpoints.up("l")]: {
+    [breakpoints.up('l')]: {
       fontFamily: tokens.fontApplicationLHeadline4FontFamily,
       fontSize: tokens.fontApplicationLHeadline4FontSize,
       fontWeight: tokens.fontApplicationLHeadline4FontWeight,
@@ -75,7 +75,7 @@ const typography = {
     lineHeight: tokens.fontApplicationSHeadline5LineHeight,
     letterSpacing: tokens.fontApplicationSHeadline5LetterSpacing,
     textTransform: tokens.fontApplicationSHeadline5TextTransform,
-    [breakpoints.up("l")]: {
+    [breakpoints.up('l')]: {
       fontFamily: tokens.fontApplicationLHeadline5FontFamily,
       fontSize: tokens.fontApplicationLHeadline5FontSize,
       fontWeight: tokens.fontApplicationLHeadline5FontWeight,
@@ -91,7 +91,7 @@ const typography = {
     lineHeight: tokens.fontApplicationSHeadline6LineHeight,
     letterSpacing: tokens.fontApplicationSHeadline6LetterSpacing,
     textTransform: tokens.fontApplicationSHeadline6TextTransform,
-    [breakpoints.up("l")]: {
+    [breakpoints.up('l')]: {
       fontFamily: tokens.fontApplicationLHeadline6FontFamily,
       fontSize: tokens.fontApplicationLHeadline6FontSize,
       fontWeight: tokens.fontApplicationLHeadline6FontWeight,
@@ -107,7 +107,7 @@ const typography = {
     lineHeight: tokens.fontApplicationSSubtitle1LineHeight,
     letterSpacing: tokens.fontApplicationSSubtitle1LetterSpacing,
     textTransform: tokens.fontApplicationSSubtitle1TextTransform,
-    [breakpoints.up("l")]: {
+    [breakpoints.up('l')]: {
       fontFamily: tokens.fontApplicationLSubtitle1FontFamily,
       fontSize: tokens.fontApplicationLSubtitle1FontSize,
       fontWeight: tokens.fontApplicationLSubtitle1FontWeight,
@@ -123,7 +123,7 @@ const typography = {
     lineHeight: tokens.fontApplicationSSubtitle2LineHeight,
     letterSpacing: tokens.fontApplicationSSubtitle2LetterSpacing,
     textTransform: tokens.fontApplicationSSubtitle2TextTransform,
-    [breakpoints.up("l")]: {
+    [breakpoints.up('l')]: {
       fontFamily: tokens.fontApplicationLSubtitle2FontFamily,
       fontSize: tokens.fontApplicationLSubtitle2FontSize,
       fontWeight: tokens.fontApplicationLSubtitle2FontWeight,
@@ -139,7 +139,7 @@ const typography = {
     lineHeight: tokens.fontApplicationSBody1LineHeight,
     letterSpacing: tokens.fontApplicationSBody1LetterSpacing,
     textTransform: tokens.fontApplicationSBody1TextTransform,
-    [breakpoints.up("l")]: {
+    [breakpoints.up('l')]: {
       fontFamily: tokens.fontApplicationLBody1FontFamily,
       fontSize: tokens.fontApplicationLBody1FontSize,
       fontWeight: tokens.fontApplicationLBody1FontWeight,
@@ -155,7 +155,7 @@ const typography = {
     lineHeight: tokens.fontApplicationSBody2LineHeight,
     letterSpacing: tokens.fontApplicationSBody2LetterSpacing,
     textTransform: tokens.fontApplicationSBody2TextTransform,
-    [breakpoints.up("l")]: {
+    [breakpoints.up('l')]: {
       fontFamily: tokens.fontApplicationLBody2FontFamily,
       fontSize: tokens.fontApplicationLBody2FontSize,
       fontWeight: tokens.fontApplicationLBody2FontWeight,
@@ -171,7 +171,7 @@ const typography = {
     lineHeight: tokens.fontApplicationSButtonLineHeight,
     letterSpacing: tokens.fontApplicationSButtonLetterSpacing,
     textTransform: tokens.fontApplicationSButtonTextTransform,
-    [breakpoints.up("l")]: {
+    [breakpoints.up('l')]: {
       fontFamily: tokens.fontApplicationLButtonFontFamily,
       fontSize: tokens.fontApplicationLButtonFontSize,
       fontWeight: tokens.fontApplicationLButtonFontWeight,
@@ -187,7 +187,7 @@ const typography = {
     lineHeight: tokens.fontApplicationSCaptionLineHeight,
     letterSpacing: tokens.fontApplicationSCaptionLetterSpacing,
     textTransform: tokens.fontApplicationSCaptionTextTransform,
-    [breakpoints.up("l")]: {
+    [breakpoints.up('l')]: {
       fontFamily: tokens.fontApplicationLCaptionFontFamily,
       fontSize: tokens.fontApplicationLCaptionFontSize,
       fontWeight: tokens.fontApplicationLCaptionFontWeight,
@@ -203,17 +203,15 @@ const typography = {
     lineHeight: tokens.fontApplicationSOverlineLineHeight,
     letterSpacing: tokens.fontApplicationSOverlineLetterSpacing,
     textTransform: tokens.fontApplicationSOverlineTextTransform,
-    color: tokens.fontApplicationSOverlineColor,
-    [breakpoints.up("l")]: {
+    [breakpoints.up('l')]: {
       fontFamily: tokens.fontApplicationLOverlineFontFamily,
       fontSize: tokens.fontApplicationLOverlineFontSize,
       fontWeight: tokens.fontApplicationLOverlineFontWeight,
       lineHeight: tokens.fontApplicationLOverlineLineHeight,
       letterSpacing: tokens.fontApplicationLOverlineLetterSpacing,
       textTransform: tokens.fontApplicationLOverlineTextTransform,
-      color: tokens.fontApplicationLOverlineColor,
     },
   },
-};
+}
 
-export { typography };
+export { typography }

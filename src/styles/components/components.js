@@ -97,6 +97,13 @@ const createComponentStyles = (tokens) => {
         },
       },
     },
+    MuiTypography: {
+      styleOverrides: {
+        overline: {
+          color: tokens.componentTypographyOverlineColor,
+        },
+      },
+    },
   }
 }
 
