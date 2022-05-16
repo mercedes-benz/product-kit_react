@@ -20,7 +20,7 @@ const createComponentStyles = (tokens) => {
               width: tokens.layoutApplicationCompactSContentWidth,
               maxWidth: tokens.layoutApplicationCompactSContentMaxWidth,
             },
-            [breakpoints.up('m')]: {
+            [breakpoints.up('md')]: {
               width: tokens.layoutApplicationCompactMContentWidth,
               maxWidth: tokens.layoutApplicationCompactMContentMaxWidth,
             },
@@ -47,7 +47,7 @@ const createComponentStyles = (tokens) => {
               width: tokens.layoutApplicationWideSContentWidth,
               maxWidth: tokens.layoutApplicationWideSContentMaxWidth,
             },
-            [breakpoints.up('m')]: {
+            [breakpoints.up('md')]: {
               width: tokens.layoutApplicationWideMContentWidth,
               maxWidth: tokens.layoutApplicationWideMContentMaxWidth,
             },
@@ -66,6 +66,26 @@ const createComponentStyles = (tokens) => {
           },
         },
       ],
+    },
+    MuiGrid: {
+      defaultProps: {
+        columns: {
+          xs: tokens.layoutApplicationCompactXsColumnAmount,
+          s: tokens.layoutApplicationCompactSColumnAmount,
+          md: tokens.layoutApplicationCompactMColumnAmount,
+          l: tokens.layoutApplicationCompactLColumnAmount,
+          xl: tokens.layoutApplicationCompactXlColumnAmount,
+          xxl: tokens.layoutApplicationCompactXxlColumnAmount,
+        },
+        columnSpacing: {
+          xs: tokens.layoutApplicationCompactXsGutterSize,
+          s: tokens.layoutApplicationCompactSGutterSize,
+          md: tokens.layoutApplicationCompactMGutterSize,
+          l: tokens.layoutApplicationCompactLGutterSize,
+          xl: tokens.layoutApplicationCompactXlGutterSize,
+          xxl: tokens.layoutApplicationCompactXxlGutterSize,
+        },
+      },
     },
     MuiButton: {
       styleOverrides: {

@@ -1,45 +1,45 @@
-import * as tokens from "@daimler/productkit-core/dist/web/styles/mbti/js/variables";
-import * as tokensDark from "@daimler/productkit-core/dist/web/styles/mbti/js/variables-dark";
+import * as tokens from '@daimler/productkit-core/dist/web/styles/mbti/js/variables'
+import * as tokensDark from '@daimler/productkit-core/dist/web/styles/mbti/js/variables-dark'
 
-import { hexToRgba } from "../../utils/js/color";
+import { hexToRgba } from '../../utils/js/color'
 
-let brandColors = {};
+let brandColors = {}
 const colorNames = [
-  "Neutral",
-  "Goldentainoi",
-  "Deepblue",
-  "Deluge",
-  "Xanadu",
-  "Lividbrown",
-  "Red",
-  "Green",
-  "Yellow",
-];
+  'Neutral',
+  'Goldentainoi',
+  'Deepblue',
+  'Deluge',
+  'Xanadu',
+  'Lividbrown',
+  'Red',
+  'Green',
+  'Yellow',
+]
 const shades = [
-  "50",
-  "100",
-  "200",
-  "300",
-  "400",
-  "500",
-  "600",
-  "700",
-  "800",
-  "900",
-];
+  '50',
+  '100',
+  '200',
+  '300',
+  '400',
+  '500',
+  '600',
+  '700',
+  '800',
+  '900',
+]
 
 colorNames.forEach((color) => {
-  let brandColor = {};
-  let contrastBrandColor = {};
+  let brandColor = {}
+  let contrastBrandColor = {}
   shades.forEach((shade) => {
-    var varName = "colorBrand" + color + shade;
-    var contrastVarName = "colorBrand" + color + "Contrast" + shade;
-    brandColor[shade] = tokens[varName];
-    contrastBrandColor[shade] = tokens[contrastVarName];
-  });
-  brandColor["contrast"] = contrastBrandColor;
-  brandColors[color] = brandColor;
-});
+    var varName = 'colorBrand' + color + shade
+    var contrastVarName = 'colorBrand' + color + 'Contrast' + shade
+    brandColor[shade] = tokens[varName]
+    contrastBrandColor[shade] = tokens[contrastVarName]
+  })
+  brandColor['contrast'] = contrastBrandColor
+  brandColors[color] = brandColor
+})
 
 const colors = {
   grey: {
@@ -67,10 +67,10 @@ const colors = {
     },
   },
   ...brandColors,
-};
+}
 
 const paletteLight = {
-  mode: "light",
+  mode: 'light',
   primary: {
     main: tokens.colorApplicationPrimary,
     contrastText: hexToRgba(
@@ -147,10 +147,10 @@ const paletteLight = {
     disabledOpacity: tokens.opacityApplicationTextLow,
   },
   ...colors,
-};
+}
 
 const paletteDark = {
-  mode: "dark",
+  mode: 'dark',
   primary: {
     main: tokensDark.colorApplicationPrimary,
     contrastText: hexToRgba(
@@ -227,6 +227,6 @@ const paletteDark = {
     disabledOpacity: tokensDark.opacityApplicationTextContrastLow,
   },
   ...colors,
-};
+}
 
-export { paletteLight, paletteDark };
+export { paletteLight, paletteDark }

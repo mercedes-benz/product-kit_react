@@ -4,7 +4,11 @@
 import './App.css'
 import React from 'react'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
-import { themeCompactLight, themeCompactDark } from '@daimler/productkit-react/'
+import {
+  themeCompactLight,
+  themeCompactDark,
+  scaledSpacing,
+} from '@daimler/productkit-react/'
 import ButtonTestModul from './components/ButtonTestModul'
 import DrawerTestModul from './components/DrawerTestModul'
 import TopAppBarTestModul from './components/TopAppBarTestModul'
@@ -36,6 +40,7 @@ import TooltipTestModul from './components/TooltipTestModul'
 import TypographyTestModul from './components/TypographyTestModul'
 import GridTestModul from './components/GridTestModul'
 import CssBaseline from '@mui/material/CssBaseline'
+import MenuIcon from '@mui/icons-material/Menu'
 import {
   AppBar,
   Container,
@@ -47,7 +52,6 @@ import {
   Toolbar,
   Typography,
 } from '@mui/material'
-import MenuIcon from '@mui/icons-material/Menu'
 
 export default function App() {
   const [state, setState] = React.useState(true)

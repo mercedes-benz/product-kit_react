@@ -1,22 +1,7 @@
-// SPDX-License-Identifier: MIT 
-
-import React from "react";
-
-import {
-  Button,
-  Grid,
-  Box
-} from "@mui/material";
-import { styled } from '@mui/material/styles';
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-
-const Item = styled(Box)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#e4e7ec',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
+// SPDX-License-Identifier: MIT
+import React from 'react'
+import { Button, Grid, Paper } from '@mui/material'
+import OpenInNewIcon from '@mui/icons-material/OpenInNew'
 
 export default class GridTestModul extends React.Component {
   render() {
@@ -32,25 +17,22 @@ export default class GridTestModul extends React.Component {
               Grids in MUI
             </a>
           </Button>
-
         </div>
-        <div className="component-wrapper">
-          <Grid container>
-            <Grid item xs={6} md={8}>
-              <Item>xs=6 md=8</Item>
-            </Grid>
-            <Grid item xs={6} md={4}>
-              <Item>xs=6 md=4</Item>
-            </Grid>
-            <Grid item xs={6} md={4}>
-              <Item>xs=6 md=4</Item>
-            </Grid>
-            <Grid item xs={6} md={8}>
-              <Item>xs=6 md=8</Item>
-            </Grid>
+        <Grid container>
+          <Grid item xs={6} md={8}>
+            <Paper>xs=6 m=8</Paper>
           </Grid>
-        </div>
+          <Grid item xs={6} md={4}>
+            <Paper>xs=6 m=4</Paper>
+          </Grid>
+          <Grid item xs={6} md={4}>
+            <Paper>xs=6 m=4</Paper>
+          </Grid>
+          <Grid item xs={6} md={8}>
+            <Paper>xs=6 m=8</Paper>
+          </Grid>
+        </Grid>
       </section>
-    );
+    )
   }
 }
