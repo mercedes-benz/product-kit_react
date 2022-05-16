@@ -48,12 +48,8 @@ export default class ChipsTestModul extends React.Component {
               }}
             >
               <Chip label="Body 2" />
-              <Chip avatar={<Avatar>M</Avatar>} label="Body 2" />
-              <Chip
-                avatar={<Avatar>M</Avatar>}
-                label="Body 2"
-                variant="outlined"
-              />
+              <Chip label="Body 2" />
+              <Chip label="Body 2" variant="outlined" />
             </Stack>
             <Stack
               sx={{
@@ -106,17 +102,8 @@ export default class ChipsTestModul extends React.Component {
               }}
             >
               <Chip label="Body 2" color="primary" />
-              <Chip
-                avatar={<Avatar>M</Avatar>}
-                label="Body 2"
-                color="primary"
-              />
-              <Chip
-                avatar={<Avatar>M</Avatar>}
-                label="Body 2"
-                variant="outlined"
-                color="primary"
-              />
+              <Chip label="Body 2" color="primary" />
+              <Chip label="Body 2" variant="outlined" color="primary" />
             </Stack>
             <Stack
               sx={{
@@ -178,17 +165,8 @@ export default class ChipsTestModul extends React.Component {
               }}
             >
               <Chip label="Body 2" color="secondary" />
-              <Chip
-                avatar={<Avatar>M</Avatar>}
-                label="Body 2"
-                color="secondary"
-              />
-              <Chip
-                avatar={<Avatar>M</Avatar>}
-                label="Body 2"
-                variant="outlined"
-                color="secondary"
-              />
+              <Chip label="Body 2" color="secondary" />
+              <Chip label="Body 2" variant="outlined" color="secondary" />
             </Stack>
             <Stack
               sx={{
