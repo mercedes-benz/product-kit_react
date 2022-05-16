@@ -104,6 +104,19 @@ const createComponentStyles = (tokens) => {
         },
       },
     },
+    MuiCheckbox: {
+      styleOverrides: {
+        colorPrimary: {
+          color: tokens.componentCheckboxPrimaryCheckedColor,
+          '&.Mui-checked': {
+            color: tokens.componentCheckboxPrimaryCheckedColor,
+          },
+          '&.MuiCheckbox-indeterminate': {
+            color: tokens.componentCheckboxPrimaryCheckedColor,
+          },
+        },
+      },
+    },
   }
 }
 
