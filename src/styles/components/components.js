@@ -151,6 +151,13 @@ const createComponentStyles = (tokens) => {
         },
       },
     },
+    MuiIconButton: {
+      styleOverrides: {
+        colorPrimary: {
+          color: tokens.componentButtonIconPrimaryDefaultIconColor,
+        },
+      },
+    },
   }
 }
 
