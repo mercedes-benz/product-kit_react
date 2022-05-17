@@ -1,7 +1,6 @@
 // @ts-nocheck
 import * as tokensLight from '@daimler/productkit-core/dist/web/styles/mbti/js/variables'
 import * as tokensDark from '@daimler/productkit-core/dist/web/styles/mbti/js/variables-dark'
-import { hexToRgba } from '../../utils/js/color'
 import { breakpoints } from '../breakpoints/breakpoints'
 
 const createComponentStyles = (tokens) => {
@@ -151,11 +150,42 @@ const createComponentStyles = (tokens) => {
         },
       },
     },
+    MuiLinearProgress: {
+      styleOverrides: {
+        colorPrimary: {
+          '& .MuiLinearProgress-bar1Determinate': {
+            backgroundColor:
+              tokens.componentProgressLinearDeterminatePrimaryBar1Color,
+          },
+          '& .MuiLinearProgress-bar1Indeterminate': {
+            backgroundColor:
+              tokens.componentProgressLinearIndeterminatePrimaryBar1Color,
+          },
+          '& .MuiLinearProgress-bar2Indeterminate': {
+            backgroundColor:
+              tokens.componentProgressLinearIndeterminatePrimaryBar2Color,
+          },
+          '& .MuiLinearProgress-bar1Buffer': {
+            backgroundColor:
+              tokens.componentProgressLinearBufferPrimaryBar1Color,
+          },
+        },
+      },
+    },
     MuiIconButton: {
       styleOverrides: {
         colorPrimary: {
           color: tokens.componentButtonIconPrimaryDefaultIconColor,
         },
+      },
+    },
+    MuiLink: {
+      styleOverrides: {
+        root: ({ ownerState }) => ({
+          ...(ownerState.color === 'primary' && {
+            color: tokens.componentLinkPrimaryDefaultColor,
+          }),
+        }),
       },
     },
   }

@@ -49,6 +49,8 @@ const paletteLight = {
   mode: 'light',
   primary: {
     main: tokens.colorApplicationPrimary,
+    light: tokens.colorApplicationPrimary,
+    dark: tokens.colorApplicationPrimary,
     contrastText: hexToRgba(
       tokens.colorApplicationContrastPrimary,
       tokens.opacityApplicationTextContrastHigh
