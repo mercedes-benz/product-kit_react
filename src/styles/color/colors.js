@@ -42,30 +42,6 @@ colorNames.forEach((color) => {
 })
 
 const colors = {
-  grey: {
-    50: tokens.colorBrandNeutral50,
-    100: tokens.colorBrandNeutral100,
-    200: tokens.colorBrandNeutral200,
-    300: tokens.colorBrandNeutral300,
-    400: tokens.colorBrandNeutral400,
-    500: tokens.colorBrandNeutral500,
-    600: tokens.colorBrandNeutral600,
-    700: tokens.colorBrandNeutral700,
-    800: tokens.colorBrandNeutral800,
-    900: tokens.colorBrandNeutral900,
-    contrast: {
-      50: tokens.colorBrandNeutralContrast50,
-      100: tokens.colorBrandNeutralContrast100,
-      200: tokens.colorBrandNeutralContrast200,
-      300: tokens.colorBrandNeutralContrast300,
-      400: tokens.colorBrandNeutralContrast400,
-      500: tokens.colorBrandNeutralContrast500,
-      600: tokens.colorBrandNeutralContrast600,
-      700: tokens.colorBrandNeutralContrast700,
-      800: tokens.colorBrandNeutralContrast800,
-      900: tokens.colorBrandNeutralContrast900,
-    },
-  },
   ...brandColors,
 }
 
