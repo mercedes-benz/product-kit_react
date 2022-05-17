@@ -144,6 +144,13 @@ const createComponentStyles = (tokens) => {
         },
       },
     },
+    MuiCircularProgress: {
+      styleOverrides: {
+        colorPrimary: {
+          color: tokens.componentProgressCircularIndeterminatePrimaryColor,
+        },
+      },
+    },
   }
 }
 
