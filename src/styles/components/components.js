@@ -188,6 +188,15 @@ const createComponentStyles = (tokens) => {
         }),
       },
     },
+    MuiPaginationItem: {
+      styleOverrides: {
+        outlinedPrimary: {
+          '&.Mui-selected': {
+            color: tokens.componentPaginationOutlinedPrimaryItemSelectedColor,
+          },
+        },
+      },
+    },
   }
 }
 
