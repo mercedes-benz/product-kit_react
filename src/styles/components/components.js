@@ -197,6 +197,15 @@ const createComponentStyles = (tokens) => {
         },
       },
     },
+    MuiRadio: {
+      styleOverrides: {
+        colorPrimary: {
+          '&.Mui-checked': {
+            color: tokens.componentRadioPrimarySelectedColor,
+          },
+        },
+      },
+    },
   }
 }
 
