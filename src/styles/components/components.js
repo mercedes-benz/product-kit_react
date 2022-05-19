@@ -262,6 +262,28 @@ const createComponentStyles = (tokens) => {
         },
       },
     },
+    MuiSwitch: {
+      styleOverrides: {
+        colorPrimary: {
+          '&.Mui-checked': {
+            color: tokens.componentSwitchPrimarySelectedColor,
+          },
+        },
+        switchBase: ({ ownerState }) => ({
+          ...(ownerState.color === 'primary' && {
+            '&.Mui-checked': {
+              '& + .MuiSwitch-track': {
+                backgroundColor:
+                  tokens.componentSwitchPrimarySelectedBackground,
+              },
+              '&.Mui-disabled .MuiSwitch-thumb': {
+                color: tokens.componentSwitchPrimarySelectedDisabledColor,
+              },
+            },
+          }),
+        }),
+      },
+    },
   }
 }
 
