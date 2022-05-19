@@ -284,6 +284,22 @@ const createComponentStyles = (tokens) => {
         }),
       },
     },
+    MuiTab: {
+      styleOverrides: {
+        textColorPrimary: {
+          '&.Mui-selected': {
+            color: tokens.componentTabsItemPrimarySelectedTextColor,
+          },
+        },
+      },
+    },
+    MuiTabs: {
+      styleOverrides: {
+        indicator: {
+          backgroundColor: tokens.componentTabsIndicatorColor,
+        },
+      },
+    },
   }
 }
 
