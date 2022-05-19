@@ -206,6 +206,62 @@ const createComponentStyles = (tokens) => {
         },
       },
     },
+    MuiInputLabel: {
+      styleOverrides: {
+        root: {
+          top: '5px', // fix custom font size misalignment
+          '&.Mui-focused': {
+            color: tokens.componentSelectFilledPrimaryFocusedLabelColor,
+          },
+          '&.MuiInputLabel-shrink': {
+            top: '3px', // fix custom font size misalignment
+          },
+        },
+      },
+    },
+    MuiFilledInput: {
+      styleOverrides: {
+        input: {
+          lineHeight: '26px', // Fix custom font misalignment of input text
+        },
+      },
+    },
+    MuiSelect: {
+      styleOverrides: {
+        root: {
+          '&::after': {
+            borderColor: tokens.componentSelectFilledPrimaryFocusedBorderColor,
+          },
+        },
+      },
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+            borderColor:
+              tokens.componentSelectOutlinedPrimaryFocusedBorderColor,
+          },
+        },
+        input: {
+          lineHeight: '26px', // Fix custom font misalignment of input text
+        },
+      },
+    },
+    MuiMenuItem: {
+      styleOverrides: {
+        root: {
+          '&.Mui-selected': {
+            backgroundColor:
+              tokens.componentMenuItemPrimarySelectedBackgroundColor,
+          },
+          '&.Mui-selected:hover': {
+            backgroundColor:
+              tokens.componentMenuItemPrimarySelectedHoverBackgroundColor,
+          },
+        },
+      },
+    },
   }
 }
 
