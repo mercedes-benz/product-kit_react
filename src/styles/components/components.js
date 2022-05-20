@@ -300,6 +300,23 @@ const createComponentStyles = (tokens) => {
         },
       },
     },
+    MuiToggleButton: {
+      styleOverrides: {
+        root: ({ ownerState }) => ({
+          ...(ownerState.color === 'primary' && {
+            '&.Mui-selected': {
+              color: tokens.componentToggleButtonPrimarySelectedTextColor,
+              backgroundColor:
+                tokens.componentToggleButtonPrimarySelectedBackgroundColor,
+            },
+            '&.Mui-selected:hover': {
+              backgroundColor:
+                tokens.componentToggleButtonPrimarySelectedHoverBackgroundColor,
+            },
+          }),
+        }),
+      },
+    },
   }
 }
 
