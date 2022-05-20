@@ -354,6 +354,20 @@ const createComponentStyles = (tokens) => {
         }),
       },
     },
+    MuiSlider: {
+      styleOverrides: {
+        thumbColorPrimary: {
+          '&:not(.Mui-disabled)': {
+            color: tokens.componentSliderPrimaryThumbColor,
+          },
+        },
+        colorPrimary: {
+          '&:not(.Mui-disabled)': {
+            color: tokens.componentSliderPrimaryMainColor,
+          },
+        },
+      },
+    },
   }
 }
 
