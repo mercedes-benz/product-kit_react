@@ -210,13 +210,24 @@ const createComponentStyles = (tokens) => {
       styleOverrides: {
         root: {
           top: '5px', // fix custom font size misalignment
-          '&.Mui-focused': {
-            color: tokens.componentSelectFilledPrimaryFocusedLabelColor,
-          },
           '&.MuiInputLabel-shrink': {
             top: '3px', // fix custom font size misalignment
           },
         },
+      },
+    },
+    MuiFormLabel: {
+      styleOverrides: {
+        root: ({ ownerState }) => ({
+          ...(ownerState.color === 'primary' &&
+            ownerState.error === false && {
+              '&:not(.Mui-error)': {
+                '&.Mui-focused': {
+                  color: tokens.componentToggleButtonPrimarySelectedTextColor,
+                },
+              },
+            }),
+        }),
       },
     },
     MuiFilledInput: {
@@ -224,23 +235,49 @@ const createComponentStyles = (tokens) => {
         input: {
           lineHeight: '26px', // Fix custom font misalignment of input text
         },
+        root: ({ ownerState }) => ({
+          ...(ownerState.color === 'primary' && {
+            '&:not(.Mui-error)': {
+              '&:after': {
+                borderColor:
+                  tokens.componentTextfieldFilledPrimaryFocusedLabelColor,
+              },
+            },
+          }),
+        }),
       },
     },
     MuiSelect: {
       styleOverrides: {
         root: {
-          '&::after': {
-            borderColor: tokens.componentSelectFilledPrimaryFocusedBorderColor,
+          '&:not(.Mui-error)': {
+            '&:after': {
+              borderColor:
+                tokens.componentSelectFilledPrimaryFocusedBorderColor,
+            },
+          },
+        },
+      },
+    },
+    MuiInputBase: {
+      styleOverrides: {
+        colorPrimary: {
+          '&:not(.Mui-error)': {
+            '&:after': {
+              borderColor: `${tokens.componentTextfieldOutlinedPrimaryFocusedLabelColor} !important`,
+            },
           },
         },
       },
     },
     MuiOutlinedInput: {
       styleOverrides: {
-        root: {
-          '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-            borderColor:
-              tokens.componentSelectOutlinedPrimaryFocusedBorderColor,
+        colorPrimary: {
+          '&:not(.Mui-error)': {
+            '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+              borderColor:
+                tokens.componentSelectOutlinedPrimaryFocusedBorderColor,
+            },
           },
         },
         input: {
