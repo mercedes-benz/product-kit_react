@@ -53,9 +53,9 @@ You can choose between those themes and import the one that suits your use-case 
 ```javascript
 //in src/App.js
 
-import { ThemeProvider } from "@mui/material/styles";
-import { themeCompactLight } from "@daimler/productkit-react"; //you may also use the other themes
-import CssBaseline from "@mui/material/CssBaseline";
+import { ThemeProvider } from '@mui/material/styles'
+import { themeCompactLight } from '@daimler/productkit-react' //you may also use the other themes
+import CssBaseline from '@mui/material/CssBaseline'
 ```
 
 Now, add `ThemeProvider` with the imported theme as a wrapper for all your components and add `CssBaseline` as the first component inside of it. You may add the `enableColorScheme` prop to the latter if you wish to use dark mode (see "Usage" section for more information). In order to take advantage of the `compact` and `wide` layout, please wrap your main components in the `main` tag. For example:
@@ -108,7 +108,7 @@ Advanced: By importing `tokens` and `tokensDark`, you can also use the core vari
 ```javascript
 // in App.js
 
-import { tokens, tokensDark } from "@daimler/productkit-react";
+import { tokens, tokensDark } from '@daimler/productkit-react'
 
 export default function App() {
   return (
@@ -122,7 +122,7 @@ export default function App() {
     >
       <MenuIcon />
     </IconButton>
-  );
+  )
 }
 ```
 
@@ -232,7 +232,7 @@ If you want to contribute to this project, please read the [contributing guide](
 
 ## Code of Conduct
 
-Please read our [Code of Conduct](https://github.com/Daimler/daimler-foss/blob/master/CODE_OF_CONDUCT.md) as it is our base for interaction.
+Please read our [Code of Conduct](https://github.com/mercedes-benz/foss/blob/master/CODE_OF_CONDUCT.md) as it is our base for interaction.
 
 ## License
 
@@ -240,7 +240,7 @@ This project is licensed under the [MIT LICENSE](LICENSE).
 
 ## Provider Information
 
-Please visit <https://www.daimler-tss.com/en/imprint/> for information on the provider.
+Please visit <https://www.mercedes-benz-techinnovation.com/en/imprint/> for information on the provider.
 
 Notice: Before you use the program in productive use, please take all necessary precautions,
 e.g. testing and verifying the program with regard to your specific use.
