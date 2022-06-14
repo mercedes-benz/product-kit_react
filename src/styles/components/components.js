@@ -221,12 +221,12 @@ const createComponentStyles = (tokens) => {
         root: ({ ownerState }) => ({
           ...(ownerState.color === 'primary' &&
             ownerState.error === false && {
-              '&:not(.Mui-error)': {
-                '&.Mui-focused': {
-                  color: tokens.componentToggleButtonPrimarySelectedTextColor,
-                },
+            '&:not(.Mui-error)': {
+              '&.Mui-focused': {
+                color: tokens.componentToggleButtonPrimarySelectedTextColor,
               },
-            }),
+            },
+          }),
         }),
       },
     },
@@ -333,7 +333,7 @@ const createComponentStyles = (tokens) => {
     MuiTabs: {
       styleOverrides: {
         indicator: {
-          backgroundColor: tokens.componentTabsIndicatorColor,
+          backgroundColor: tokens.componentTabsItemPrimarySelectedIndicatorColor,
         },
       },
     },
@@ -348,7 +348,7 @@ const createComponentStyles = (tokens) => {
             },
             '&.Mui-selected:hover': {
               backgroundColor:
-                tokens.componentToggleButtonPrimarySelectedHoverBackgroundColor,
+                tokens.componentToggleButtonPrimaryHoverBackgroundColor,
             },
           }),
         }),
