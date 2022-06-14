@@ -27,64 +27,55 @@ export default class TypographyTestModul extends React.Component {
                 </div>
                 <div className="component-wrapper">
                     <Typography variant="h1">
-                        <code>
-                            Source Code Pro
-                        </code>
-                    </Typography>
-                    <br />
-                    <Typography variant="h1">
-                        Source Sans Pro
-                    </Typography>
-                    <Typography variant="h1">
-                        The quick brown fox jumps over the lazy dog
+                        Headline1 - The quick brown fox jumps over the lazy dog
                     </Typography>
                     <br />
                     <Typography variant="h2">
-                        The quick brown fox jumps over the lazy dog
+                        Headline2 - The quick brown fox jumps over the lazy dog
                     </Typography>
                     <br />
                     <Typography variant="h3">
-                        The quick brown fox jumps over the lazy dog
+                        Headline3 - The quick brown fox jumps over the lazy dog
                     </Typography>
                     <br />
                     <Typography variant="h4">
-                        The quick brown fox jumps over the lazy dog
+                        Headline4 - The quick brown fox jumps over the lazy dog
                     </Typography>
                     <br />
                     <Typography variant="h5">
-                        The quick brown fox jumps over the lazy dog
+                        Headline5 - The quick brown fox jumps over the lazy dog
                     </Typography>
                     <br />
                     <Typography variant="h6">
-                        The quick brown fox jumps over the lazy dog
+                        Headline6 - The quick brown fox jumps over the lazy dog
                     </Typography>
                     <br />
                     <Typography variant="subtitle1">
-                        The quick brown fox jumps over the lazy dog
+                        Subtitle1 - The quick brown fox jumps over the lazy dog
                     </Typography>
                     <br />
                     <Typography variant="subtitle2">
-                        The quick brown fox jumps over the lazy dog
+                        Subtitle2 - The quick brown fox jumps over the lazy dog
                     </Typography>
                     <br />
                     <Typography variant="body1">
-                        The quick brown fox jumps over the lazy dog
+                        Body1 - The quick brown fox jumps over the lazy dog
                     </Typography>
                     <br />
                     <Typography variant="body2">
-                        The quick brown fox jumps over the lazy dog
+                        Body2 - The quick brown fox jumps over the lazy dog
                     </Typography>
                     <br />
                     <Typography variant="button">
-                        The quick brown fox jumps over the lazy dog
+                        Button - The quick brown fox jumps over the lazy dog
                     </Typography>
                     <br />
                     <Typography variant="caption">
-                        The quick brown fox jumps over the lazy dog
+                        Caption - The quick brown fox jumps over the lazy dog
                     </Typography>
                     <br />
                     <Typography variant="overline">
-                        The quick brown fox jumps over the lazy dog
+                        Overline - The quick brown fox jumps over the lazy dog
                     </Typography>
                 </div>
             </section>
