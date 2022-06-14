@@ -212,7 +212,9 @@ const createComponentStyles = (tokens) => {
           top: '5px', // fix custom font size misalignment
           '&.MuiInputLabel-shrink': {
             top: '3px', // fix custom font size misalignment
+            //color: tokens.componentTextfieldOutlinedPrimaryFocusedLabelColor,
           },
+          //color: tokens.componentTextfieldOutlinedPrimaryFocusedLabelColor,
         },
       },
     },
@@ -223,7 +225,7 @@ const createComponentStyles = (tokens) => {
             ownerState.error === false && {
             '&:not(.Mui-error)': {
               '&.Mui-focused': {
-                color: tokens.componentToggleButtonPrimarySelectedTextColor,
+                color: tokens.componentTextfieldOutlinedPrimaryFocusedLabelColor,
               },
             },
           }),
