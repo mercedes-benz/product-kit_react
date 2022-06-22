@@ -2,16 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
+# 2.0.0
+
+## New
+
+- Updated Product Kit Core to v2.0.0
+- Updated typography with new font-faces
+
 # 1.2.0
 
-### Breaking Changes
+## Breaking Changes
 
-* Removed css classes for responsive scalings
-    * Use `scaledSpacing` function in sx-prop. See [spacing section in readme](https://github.com/mercedes-benz/product-kit_react/blob/main/README.md#spacing) for further details.
-* Changed initial entry point for import statement. See [installation and setup section in readme](https://github.com/mercedes-benz/product-kit_react/blob/main/README.md#installation-and-setup) for further details.
+- Removed css classes for responsive scalings
+  - Use `scaledSpacing` function in sx-prop. See [spacing section in readme](https://github.com/mercedes-benz/product-kit_react/blob/main/README.md#spacing) for further details.
+- Changed initial entry point for import statement. See [installation and setup section in readme](https://github.com/mercedes-benz/product-kit_react/blob/main/README.md#installation-and-setup) for further details.
 
-### Improvements
-* Updated Product Kit Core to 1.3.2
+## Improvements
+
+- Updated Product Kit Core to 1.3.2
 
 # 1.1.0
 

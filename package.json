@@ -7,8 +7,7 @@
   "bugs": "https://github.com/mercedes-benz/product-kit_react/issues",
   "main": "src/index.js",
   "dependencies": {
-    "@daimler/productkit-core": "file:../core",
-    "@daimler/productkit-react": "file:../react"
+    "@daimler/productkit-core": "^2.0.0"
   },
   "devDependencies": {
     "@mui/material": "^5.7.0",
