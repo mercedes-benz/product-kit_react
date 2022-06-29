@@ -53,19 +53,21 @@ You can choose between those themes and import the one that suits your use-case 
 ```javascript
 //in src/App.js
 
-import { ThemeProvider } from '@mui/material/styles'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
 import { themeCompactLight } from '@daimler/productkit-react' //you may also use the other themes
 import CssBaseline from '@mui/material/CssBaseline'
 ```
 
-Now, add `ThemeProvider` with the imported theme as a wrapper for all your components and add `CssBaseline` as the first component inside of it. You may add the `enableColorScheme` prop to the latter if you wish to use dark mode (see "Usage" section for more information). In order to take advantage of the `compact` and `wide` layout, please wrap your main components in the `main` tag. For example:
+Now, use `createTheme` with the imported theme object. Then, add `ThemeProvider` with the created theme as a wrapper for all your components and add `CssBaseline` as the first component inside of it. You may add the `enableColorScheme` prop to the latter if you wish to use dark mode (see "Usage" section for more information). In order to take advantage of the `compact` and `wide` layout, please wrap your main components in the `main` tag. For example:
 
 ```javascript
 // in src/App.js
 
 export default function App() {
+    const muiThemeLight = createTheme(themeCompactLight)
+
     return (
-        <ThemeProvider theme={themeCompactLight}>
+        <ThemeProvider theme={muiThemeLight}>
             <CssBaseline enableColorScheme />
             <!-- Navbar, sidebar, etc... -->
             <main>
@@ -213,12 +215,13 @@ You can initially use one of the two dark themes (`themeCompactDark` and `themeW
 
 export default function App() {
     const [state, setState] = React.useState(true);
-    const classes = useStyles();
+    const muiThemeLight = createTheme(themeCompactLight)
+    const muiThemeDark = createTheme(themeCompactDark)
     const switchDarkMode = () => {
         setState(!state)
     }
     return (
-        <ThemeProvider theme={state ? themeCompactLight : themeCompactDark}>
+        <ThemeProvider theme={state ? muiThemeLight : muiThemeDark}>
             <CssBaseline enableColorScheme />
             <Navbar>
                 <FormGroup>
