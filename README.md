@@ -4,7 +4,7 @@
 
 [![license](https://img.shields.io/badge/license-MIT-38de03e?style=flat)](LICENSE)
 ![React](https://img.shields.io/badge/React-17.0.2-61DBFB.svg)
-![MUI](https://img.shields.io/badge/MUI-5.3.0-3F51B5.svg)
+![MUI](https://img.shields.io/badge/MUI-5.8.6-3F51B5.svg)
 
 Product Kit React provides a theme for Mercedes-Benz Tech Innovation web frontends based on the material design framework MUI.
 
