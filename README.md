@@ -76,16 +76,30 @@ export default function App() {
 }
 ```
 
-Next, import the fonts `Source Sans Pro` and `Source Code Pro`:
+In order to use the proprietary Mercedes-Benz font, you have to download the web font and include it in your project.
 
-```html
-<!-- in head of public/index.html -->
+1. In your `src` directory, create a new folder. You could name it `fonts` for example.
+2. Copy the `woff2` version of both the **MB Corpo S Text Web** and **MB Corpo A Title Cond Web** font into the newly created `fonts` directory.
+3. Now you have to register both fonts as a css `font-face` in a root stylesheet, for example in `src/index.css` like this
 
-<link
-  href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+Pro&display=swap"
-  rel="stylesheet"
-/>
+```css
+<style>
+@font-face {
+    font-family: "MB Corpo S Text Web";
+    src: local("MB Corpo S Text Web"),
+        url("./fonts/<NAME_OF_THE_FILE>.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "MB Corpo A Title Cond Web";
+    src: local("MB Corpo A Title Cond Web"),
+        url("./fonts/<NAME_OF_THE_FILE>.woff2") format("woff2");
+}
+</style>
 ```
+
+4. Lastly - if not already done - import your stylesheet to `src/index.js`
+5. Be sure to not change the values for `font-family` and `src: local()`. Replace `<NAME_OF_THE_FILE>` with the filename.
 
 Product Kit React also provides responsive spacings from [Product Kit Core](https://github.com/mercedes-benz/product-kit_core). You can use them by importing the `scaledSpacings` function in the component and using it inside the sx prop of a component. More on spacings in the "Usage" section.
 
