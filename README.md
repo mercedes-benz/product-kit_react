@@ -6,7 +6,7 @@
 ![React](https://img.shields.io/badge/React-17.0.2-61DBFB.svg)
 ![MUI](https://img.shields.io/badge/MUI-5.3.0-3F51B5.svg)
 
-Product Kit React provides a theme for Daimler TSS web frontends based on the material design framework MUI.
+Product Kit React provides a theme for Mercedes-Benz Tech Innovation web frontends based on the material design framework MUI.
 
 Feel free to open an [issue](https://github.com/mercedes-benz/product-kit_react/issues) or provide a pull request with the desired modifications.
 
@@ -46,7 +46,7 @@ Product Kit React provides four themes:
   - `themeWideLight` for light mode.
   - `themeWideDark` for dark mode.
 
-All themes include custom Daimler TSS colors, breakpoints, spacings, shapes and typography.
+All themes include custom Mercedes-Benz Tech Innovation colors, breakpoints, spacings, shapes and typography.
 
 You can choose between those themes and import the one that suits your use-case best alongside MUI's `ThemeProvider` and `CssBaseline`:
 
@@ -140,13 +140,13 @@ export default function App() {
 }
 ```
 
-Your MUI components are now styled accordingly to the styleguide of Daimler TSS!
+Your MUI components are now styled accordingly to the styleguide of Mercedes-Benz Tech Innovation!
 
 ## Usage
 
 ### Colors
 
-You can use all custom Daimler TSS colors like `primary` (corporate blue) or `secondary` (corporate pink) as well as other brand colors with their shade like `grayblue-400` and text colors in either of the following ways:
+You can use all custom Mercedes-Benz Tech Innovation colors like `primary` (corporate blue) or `secondary` (corporate pink) as well as other brand colors with their shade like `grayblue-400` and text colors in either of the following ways:
 
 - Using the `color` prop
 - Access colors using the `sx` prop
@@ -169,7 +169,7 @@ The correct contrast color is set automatically, but can be called programmatica
 
 Note that you have to set `color="inherit"` when using icons on colored background in order to receive the correct contrast color.
 
-> All custom colors of Daimler TSS are mentioned in [Product Kit Core](https://github.com/mercedes-benz/product-kit_core).
+> All custom colors of Mercedes-Benz Tech Innovation are mentioned in [Product Kit Core](https://github.com/mercedes-benz/product-kit_core).
 
 ### Spacing
 
@@ -193,11 +193,11 @@ export default function MyComponent() {
 
 ### Container
 
-You should use the `main`-tag alongside `CssBaseline` and either of the custom Daimler TSS themes to wrap all your main components in order to get responsive margins and max-widths. Please refer to the "Installation & Setup" section for more information and a code example on this.
+You should use the `main`-tag alongside `CssBaseline` and either of the custom Mercedes-Benz Tech Innovation themes to wrap all your main components in order to get responsive margins and max-widths. Please refer to the "Installation & Setup" section for more information and a code example on this.
 
 ### Typography
 
-You can use typography as you are used to from MUI. Custom Daimler TSS responsive tokens are applied automatically.
+You can use typography as you are used to from MUI. Custom Mercedes-Benz Tech Innovation responsive tokens are applied automatically.
 
 ```html
 <Typography variant="h6"> I'm a headline 6 and I'm responsive! </Typography>
@@ -233,7 +233,7 @@ export default function App() {
 }
 ```
 
-The Daimler TSS application colors like `primary` are also automatically changed when switching to dark mode (see examples).
+The Mercedes-Benz Tech Innovation application colors like `primary` are also automatically changed when switching to dark mode (see examples).
 
 ### Elevation
 
