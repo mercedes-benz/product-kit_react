@@ -4,9 +4,9 @@
 
 [![license](https://img.shields.io/badge/license-MIT-38de03e?style=flat)](LICENSE)
 ![React](https://img.shields.io/badge/React-17.0.2-61DBFB.svg)
-![MUI](https://img.shields.io/badge/MUI-5.3.0-3F51B5.svg)
+![MUI](https://img.shields.io/badge/MUI-5.8.6-3F51B5.svg)
 
-Product Kit React provides a theme for Daimler TSS web frontends based on the material design framework MUI.
+Product Kit React provides a theme for Mercedes-Benz Tech Innovation web frontends based on the material design framework MUI.
 
 Feel free to open an [issue](https://github.com/mercedes-benz/product-kit_react/issues) or provide a pull request with the desired modifications.
 
@@ -46,26 +46,28 @@ Product Kit React provides four themes:
   - `themeWideLight` for light mode.
   - `themeWideDark` for dark mode.
 
-All themes include custom Daimler TSS colors, breakpoints, spacings, shapes and typography.
+All themes include custom Mercedes-Benz Tech Innovation colors, breakpoints, spacings, shapes and typography.
 
 You can choose between those themes and import the one that suits your use-case best alongside MUI's `ThemeProvider` and `CssBaseline`:
 
 ```javascript
 //in src/App.js
 
-import { ThemeProvider } from "@mui/material/styles";
-import { themeCompactLight } from "@daimler/productkit-react"; //you may also use the other themes
-import CssBaseline from "@mui/material/CssBaseline";
+import { ThemeProvider, createTheme } from '@mui/material/styles'
+import { themeCompactLight } from '@daimler/productkit-react' //you may also use the other themes
+import CssBaseline from '@mui/material/CssBaseline'
 ```
 
-Now, add `ThemeProvider` with the imported theme as a wrapper for all your components and add `CssBaseline` as the first component inside of it. You may add the `enableColorScheme` prop to the latter if you wish to use dark mode (see "Usage" section for more information). In order to take advantage of the `compact` and `wide` layout, please wrap your main components in the `main` tag. For example:
+Now, use `createTheme` with the imported theme object. Then, add `ThemeProvider` with the created theme as a wrapper for all your components and add `CssBaseline` as the first component inside of it. You may add the `enableColorScheme` prop to the latter if you wish to use dark mode (see "Usage" section for more information). In order to take advantage of the `compact` and `wide` layout, please wrap your main components in the `main` tag. For example:
 
 ```javascript
 // in src/App.js
 
 export default function App() {
+    const muiThemeLight = createTheme(themeCompactLight)
+
     return (
-        <ThemeProvider theme={themeCompactLight}>
+        <ThemeProvider theme={muiThemeLight}>
             <CssBaseline enableColorScheme />
             <!-- Navbar, sidebar, etc... -->
             <main>
@@ -76,16 +78,30 @@ export default function App() {
 }
 ```
 
-Next, import the fonts `Source Sans Pro` and `Source Code Pro`:
+In order to use the proprietary Mercedes-Benz font, you have to download the web font and include it in your project.
 
-```html
-<!-- in head of public/index.html -->
+1. In your `src` directory, create a new folder. You could name it `fonts` for example.
+2. Copy the `woff2` version of both the **MB Corpo S Text Web** and **MB Corpo A Title Cond Web** font into the newly created `fonts` directory.
+3. Now you have to register both fonts as a css `font-face` in a root stylesheet, for example in `src/index.css` like this
 
-<link
-  href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+Pro&display=swap"
-  rel="stylesheet"
-/>
+```css
+<style>
+@font-face {
+    font-family: "MB Corpo S Text Web";
+    src: local("MB Corpo S Text Web"),
+        url("./fonts/<NAME_OF_THE_FILE>.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "MB Corpo A Title Cond Web";
+    src: local("MB Corpo A Title Cond Web"),
+        url("./fonts/<NAME_OF_THE_FILE>.woff2") format("woff2");
+}
+</style>
 ```
+
+4. Lastly - if not already done - import your stylesheet to `src/index.js`
+5. Be sure to not change the values for `font-family` and `src: local()`. Replace `<NAME_OF_THE_FILE>` with the filename.
 
 Product Kit React also provides responsive spacings from [Product Kit Core](https://github.com/mercedes-benz/product-kit_core). You can use them by importing the `scaledSpacings` function in the component and using it inside the sx prop of a component. More on spacings in the "Usage" section.
 
@@ -108,7 +124,7 @@ Advanced: By importing `tokens` and `tokensDark`, you can also use the core vari
 ```javascript
 // in App.js
 
-import { tokens, tokensDark } from "@daimler/productkit-react";
+import { tokens, tokensDark } from '@daimler/productkit-react'
 
 export default function App() {
   return (
@@ -122,17 +138,17 @@ export default function App() {
     >
       <MenuIcon />
     </IconButton>
-  );
+  )
 }
 ```
 
-Your MUI components are now styled accordingly to the styleguide of Daimler TSS!
+Your MUI components are now styled accordingly to the styleguide of Mercedes-Benz Tech Innovation!
 
 ## Usage
 
 ### Colors
 
-You can use all custom Daimler TSS colors like `primary` (corporate blue) or `secondary` (corporate pink) as well as other brand colors with their shade like `grayblue-400` and text colors in either of the following ways:
+You can use all custom Mercedes-Benz Tech Innovation colors like `primary` (corporate blue) or `secondary` (corporate pink) as well as other brand colors with their shade like `grayblue-400` and text colors in either of the following ways:
 
 - Using the `color` prop
 - Access colors using the `sx` prop
@@ -143,7 +159,7 @@ You can use all custom Daimler TSS colors like `primary` (corporate blue) or `se
 
 <Box sx={{ color: 'secondary.main' }}>Text</Box>
 
-<IconButton sx={{ color: 'grayblue-400.main' }}>
+<IconButton sx={{ color: 'red-400.main' }}>
     <MenuIcon />
 </IconButton>
 
@@ -151,11 +167,11 @@ const theme = useTheme() <!-- Don't forget to import useTheme -->
 <div style={{ color: theme.palette.text.secondary }}>Text</Box>
 ```
 
-The correct contrast color is set automatically, but can be called programmatically with for example `pink.contrastText` or `pink-800.contrastText`.
+The correct contrast color is set automatically, but can be called programmatically with for example `red.contrastText` or `red-800.contrastText`.
 
 Note that you have to set `color="inherit"` when using icons on colored background in order to receive the correct contrast color.
 
-> All custom colors of Daimler TSS are mentioned in [Product Kit Core](https://github.com/mercedes-benz/product-kit_core).
+> All custom colors of Mercedes-Benz Tech Innovation are mentioned in [Product Kit Core](https://github.com/mercedes-benz/product-kit_core).
 
 ### Spacing
 
@@ -179,11 +195,11 @@ export default function MyComponent() {
 
 ### Container
 
-You should use the `main`-tag alongside `CssBaseline` and either of the custom Daimler TSS themes to wrap all your main components in order to get responsive margins and max-widths. Please refer to the "Installation & Setup" section for more information and a code example on this.
+You should use the `main`-tag alongside `CssBaseline` and either of the custom Mercedes-Benz Tech Innovation themes to wrap all your main components in order to get responsive margins and max-widths. Please refer to the "Installation & Setup" section for more information and a code example on this.
 
 ### Typography
 
-You can use typography as you are used to from MUI. Custom Daimler TSS responsive tokens are applied automatically.
+You can use typography as you are used to from MUI. Custom Mercedes-Benz Tech Innovation responsive tokens are applied automatically.
 
 ```html
 <Typography variant="h6"> I'm a headline 6 and I'm responsive! </Typography>
@@ -199,12 +215,13 @@ You can initially use one of the two dark themes (`themeCompactDark` and `themeW
 
 export default function App() {
     const [state, setState] = React.useState(true);
-    const classes = useStyles();
+    const muiThemeLight = createTheme(themeCompactLight)
+    const muiThemeDark = createTheme(themeCompactDark)
     const switchDarkMode = () => {
         setState(!state)
     }
     return (
-        <ThemeProvider theme={state ? themeCompactLight : themeCompactDark}>
+        <ThemeProvider theme={state ? muiThemeLight : muiThemeDark}>
             <CssBaseline enableColorScheme />
             <Navbar>
                 <FormGroup>
@@ -219,7 +236,7 @@ export default function App() {
 }
 ```
 
-The Daimler TSS application colors like `primary` are also automatically changed when switching to dark mode (see examples).
+The Mercedes-Benz Tech Innovation application colors like `primary` are also automatically changed when switching to dark mode (see examples).
 
 ### Elevation
 
@@ -232,7 +249,7 @@ If you want to contribute to this project, please read the [contributing guide](
 
 ## Code of Conduct
 
-Please read our [Code of Conduct](https://github.com/Daimler/daimler-foss/blob/master/CODE_OF_CONDUCT.md) as it is our base for interaction.
+Please read our [Code of Conduct](https://github.com/mercedes-benz/foss/blob/master/CODE_OF_CONDUCT.md) as it is our base for interaction.
 
 ## License
 
@@ -240,7 +257,7 @@ This project is licensed under the [MIT LICENSE](LICENSE).
 
 ## Provider Information
 
-Please visit <https://www.daimler-tss.com/en/imprint/> for information on the provider.
+Please visit <https://www.mercedes-benz-techinnovation.com/en/imprint/> for information on the provider.
 
 Notice: Before you use the program in productive use, please take all necessary precautions,
 e.g. testing and verifying the program with regard to your specific use.

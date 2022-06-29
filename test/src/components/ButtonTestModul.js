@@ -34,53 +34,82 @@ export default function ButtonTestModul() {
                 </Button>
 
             </div>
-            <Box sx={{ ...scaledSpacing("my", "xxs") }}>
-                <Box sx={{ ...scaledSpacing("my", "xxs") }}>
+            <Box sx={{ ...scaledSpacing("my", "xs") }}>
+                <Box sx={{ ...scaledSpacing("my", "xs") }}>
                     <Grid
                         container
                         direction="row"
                         justifyContent="center"
                         alignItems="center"
+                        sx={{ ...scaledSpacing("gap", "xs") }}
                     >
-                        <Grid itemScope>
-                            <Button variant="contained">
-                                Button
-                            </Button>
-                        </Grid>
-                        <Grid item>
-                            <Button color="secondary" variant="text">
-                                Button
-                            </Button>
-                        </Grid>
-                        <Grid item>
-                            <Button color="error" variant="outlined">
-                                Button
-                            </Button>
-                        </Grid>
+
+                        <Button variant="contained">
+                            Button
+                        </Button>
+                        <Button variant="text">
+                            Button
+                        </Button>
+                        <Button variant="outlined">
+                            Button
+                        </Button>
                     </Grid>
                 </Box>
-                <Box sx={{ ...scaledSpacing("my", "xxs") }}>
+                <Box sx={{ ...scaledSpacing("my", "xs") }}>
                     <Grid
                         container
                         direction="row"
                         justifyContent="center"
                         alignItems="center"
+                        sx={{ ...scaledSpacing("gap", "xs") }}
                     >
-                        <Grid itemScope>
-                            <Button variant="contained" startIcon={<EditIcon />}>
-                                edit
-                            </Button>
-                        </Grid>
-                        <Grid item>
-                            <Button color="secondary" variant="contained" startIcon={<FavoriteIcon />}>
-                                favorite
-                            </Button>
-                        </Grid>
-                        <Grid item>
-                            <Button color="error" variant="contained" startIcon={<AddIcon />}>
-                                error
-                            </Button>
-                        </Grid>
+                        <Button variant="contained" startIcon={<EditIcon />}>
+                            Edit
+                        </Button>
+                        <Button variant="text" startIcon={<FavoriteIcon />}>
+                            Favorite
+                        </Button>
+                        <Button variant="outlined" startIcon={<AddIcon />}>
+                            Add
+                        </Button>
+                    </Grid>
+                </Box>
+                <Box sx={{ ...scaledSpacing("my", "xs") }}>
+                    <Grid
+                        container
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="center"
+                        sx={{ ...scaledSpacing("gap", "xs") }}
+                    >
+                        <Button color="secondary" variant="contained">
+                            Button
+                        </Button>
+                        <Button color="secondary" variant="text">
+                            Button
+                        </Button>
+                        <Button color="secondary" variant="outlined">
+                            Button
+                        </Button>
+                    </Grid>
+                </Box>
+                <Box sx={{ ...scaledSpacing("my", "xs") }}>
+                    <Grid
+                        container
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="center"
+                        sx={{ ...scaledSpacing("gap", "xs") }}
+                    >
+                        <Button color="secondary" variant="contained" startIcon={<EditIcon />}>
+                            Edit
+                        </Button>
+                        <Button color="secondary" variant="text" startIcon={<FavoriteIcon />}>
+                            Favorite
+                        </Button>
+                        <Button color="secondary" variant="outlined" startIcon={<AddIcon />}>
+                            Add
+                        </Button>
                     </Grid>
                 </Box>
             </Box>
