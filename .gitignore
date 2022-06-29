@@ -15,6 +15,9 @@
 
 # security
 /scan
+sechub_report*.json
+sechub_report*.html
+sechub-false-positives*.json
 
 # misc
 .DS_Store
