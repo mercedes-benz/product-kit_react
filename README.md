@@ -159,7 +159,7 @@ You can use all custom Mercedes-Benz Tech Innovation colors like `primary` (corp
 
 <Box sx={{ color: 'secondary.main' }}>Text</Box>
 
-<IconButton sx={{ color: 'grayblue-400.main' }}>
+<IconButton sx={{ color: 'red-400.main' }}>
     <MenuIcon />
 </IconButton>
 
@@ -167,7 +167,7 @@ const theme = useTheme() <!-- Don't forget to import useTheme -->
 <div style={{ color: theme.palette.text.secondary }}>Text</Box>
 ```
 
-The correct contrast color is set automatically, but can be called programmatically with for example `pink.contrastText` or `pink-800.contrastText`.
+The correct contrast color is set automatically, but can be called programmatically with for example `red.contrastText` or `red-800.contrastText`.
 
 Note that you have to set `color="inherit"` when using icons on colored background in order to receive the correct contrast color.
 
