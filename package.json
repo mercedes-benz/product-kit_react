@@ -10,8 +10,8 @@
     "@daimler/productkit-core": "^2.0.0"
   },
   "devDependencies": {
-    "@mui/material": "^5.8.6",
-    "@mui/styles": "^5.8.6",
+    "@mui/material": "^5.9.2",
+    "@mui/styles": "^5.9.2",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@mui/icons-material": "^5.8.4",
