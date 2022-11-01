@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+# 2.1.0
+
+## New
+
+- Updated Product Kit Core to v2.1.0
+- Added typography styles subtitle1Strong, subtitle2Strong, body1Strong, body2Strong, captionStrong
+
+## Changed
+
+- Typography styles updated to Product Kit Core v2.1.0
+
 # 2.0.0
 
 ## New

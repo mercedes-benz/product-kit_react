@@ -1,13 +1,13 @@
 {
   "name": "@daimler/productkit-react",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Product Kit React provides MUI themes that bring design tokens from Product Kit Core to MUI for React.",
   "license": "MIT",
   "repository": "https://github.com/mercedes-benz/product-kit_react",
   "bugs": "https://github.com/mercedes-benz/product-kit_react/issues",
   "main": "src/index.js",
   "dependencies": {
-    "@daimler/productkit-core": "^2.0.0"
+    "@daimler/productkit-core": "^2.1.0"
   },
   "devDependencies": {
     "@mui/material": "^5.9.2",

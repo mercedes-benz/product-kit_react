@@ -54,25 +54,52 @@ export default class TypographyTestModul extends React.Component {
                         Subtitle1 - The quick brown fox jumps over the lazy dog
                     </Typography>
                     <br />
+                    <Typography variant="subtitle1Strong">
+                        Subtitle1 Strong - The quick brown fox jumps over the lazy dog
+                    </Typography>
+                    <br />
+                    <br />
                     <Typography variant="subtitle2">
                         Subtitle2 - The quick brown fox jumps over the lazy dog
                     </Typography>
+                    <br />
+                    <Typography variant="subtitle2Strong">
+                        Subtitle2 Strong - The quick brown fox jumps over the lazy dog
+                    </Typography>
+                    <br />
                     <br />
                     <Typography variant="body1">
                         Body1 - The quick brown fox jumps over the lazy dog
                     </Typography>
                     <br />
+                    <Typography variant="body1Strong">
+                        Body1 Strong - The quick brown fox jumps over the lazy dog
+                    </Typography>
+                    <br />
+                    <br />
                     <Typography variant="body2">
                         Body2 - The quick brown fox jumps over the lazy dog
                     </Typography>
+                    <br />
+                    <Typography variant="body2Strong">
+                        Body2 Strong - The quick brown fox jumps over the lazy dog
+                    </Typography>
+                    <br />
                     <br />
                     <Typography variant="button">
                         Button - The quick brown fox jumps over the lazy dog
                     </Typography>
                     <br />
+                    <br />
                     <Typography variant="caption">
                         Caption - The quick brown fox jumps over the lazy dog
                     </Typography>
+                    <br />
+                    <br />
+                    <Typography variant="captionStrong">
+                        Caption  Strong - The quick brown fox jumps over the lazy dog
+                    </Typography>
+                    <br />
                     <br />
                     <Typography variant="overline">
                         Overline - The quick brown fox jumps over the lazy dog
