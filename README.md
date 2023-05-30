@@ -1,4 +1,5 @@
-<!-- SPDX-License-Identifier: MIT --->
+> **Note** <br>
+> This repository will not be maintained actively any longer.
 
 ![Product Kit React Logo](./docs/images/productkit_react_github_logo.png)
 
